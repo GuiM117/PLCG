@@ -1,31 +1,5 @@
 grammar aprendizagem;
 
-@members{
-
-     /* Definir objectos...
-
-     public class aluno(){
-        private String nome;
-        private int numero;
-        private int idade;
-        private List<String> caracteristicas;
-        ...
-     }
-     public class recurso(){
-        private int id;
-        private String nome;
-        private String descricao;
-        private List<String> caracteristicasR;
-        ...
-     }
-     public class conceito(){
-        private int id;
-        private String nome;
-        private String descricao;
-        ...
-     }*/
-}
-
 // ------------------------------------------ PARSER ---------------------------------------
 
 main: alunos recursos conceitos
