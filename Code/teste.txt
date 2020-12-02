@@ -1,0 +1,8 @@
+ALUNOS
+ana A00000 25 (timidez,desconcentracao);
+joao A11111 24 (desmotivacao,stress);
+xico A22222 23 (participacao,confianca).
+RECURSOS
+Trabalhos em grupo;
+Feedbacks constantes;
+Ler documentacao.
