@@ -19,7 +19,7 @@ listaRecursos:
     recurso
     (PONTOVIRGULA recurso)*
     ;
-recurso: id descr idadeIdeal caracteristicas {/* recurso ter um intervalo de idade e não idadeIdeal ou intervalo acima da idadeIdeal*/}
+recurso: idRecurso nomeRecurso descr idadeIdeal caracteristicas {/* recurso ter um intervalo de idade e não idadeIdeal ou intervalo acima da idadeIdeal*/}
     ;
 listaAlunos:
     aluno
@@ -33,13 +33,21 @@ aluno: nomeAluno numero idadeAluno caracteristicas
      System.out.println("------------");
     }
     ;
-caracteristicas: LPAREN
+caracteristicas returns [ArrayList<String> listaCarateristicasAluno = new ArrayList<String>();]: LPAREN
      caracteristica {System.out.println("Caracteristica: " + $caracteristica.text);}
-     (VIRGULA caracteristica)* {System.out.println("Caracteristica: " + $caracteristica.text);}
+     (VIRGULA caracteristica)* { if($listaCarateristicasAluno.contains($caracteristica.text) System.out.println("Característica já existente.");
+                                else System.out.println("Caracteristica: " + $caracteristica.text);}
      RPAREN
      ;
-conceito: nomeConceito curso
+conceito: idConceito nomeConceito curso
     ;
+
+temRecurso: numero idRecurso
+          ;
+
+temConceito: idRecurso idConceito
+           ;
+
 idadeAluno: NUM
      ;
 idadeIdeal: NUM
@@ -48,12 +56,18 @@ caracteristica: PALAVRA
      ;
 nomeAluno: PALAVRA
     ;
+idConceito: NUM
+          ;
 nomeConceito: PALAVRA
     ;
 descr: PALAVRA+
     ;
-id: NUM
+idRecurso: NUM
     ;
+
+nomeRecurso: PALAVRA
+           ;
+
 curso: PALAVRA+;
 
 numero: NUMEROALUNO
@@ -66,8 +80,8 @@ RECURSOS: [rR][eE][cC][uU][rR][sS][oO][sS];
 VIRGULA: ',';
 PONTOVIRGULA: ';';
 PONTO: '.';
-LPAREN: '(';
-RPAREN: ')';
+LPAREN: '[';
+RPAREN: ']';
 NUM: ('0'..'9')+ //[0-9]+
    ;
 NUMEROALUNO: ('A')[0-9]+
