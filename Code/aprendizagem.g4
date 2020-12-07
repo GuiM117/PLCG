@@ -17,14 +17,14 @@ conceitos: CONCEITOS
     listaConceitos
     PONTO
     ;
+listaAlunos:
+    aL
+    (PONTOVIRGULA aL)*
+    ;
 
 listaRecursos:
     rA
     (PONTOVIRGULA rA)*
-    ;
-listaAlunos:
-    aL
-    (PONTOVIRGULA aL)*
     ;
 listaConceitos:
     cProg
@@ -32,7 +32,6 @@ listaConceitos:
     ;
 rA: idRecurso nomeRecurso descr idadeIdeal caracteristicas
     {
-    /* recurso ter um intervalo de idade e não idadeIdeal ou intervalo acima da idadeIdeal*/
     System.out.println("ID: " + $idRecurso.text);
     System.out.println("Recurso: " + $nomeRecurso.text);
     System.out.println("Descrição: " + $descr.text);
@@ -62,7 +61,7 @@ caracteristicas returns [ArrayList<String> listaCarateristicasAluno = new ArrayL
                                 else System.out.println("Caracteristica: " + $caracteristica.text);}
      RPAREN
      ;
-     
+
 idadeAluno: NUM
      ;
 idadeIdeal: NUM
@@ -72,21 +71,19 @@ caracteristica: PALAVRA
 nomeAluno: PALAVRA
     ;
 idConceito: IDCONCEITO
-          ;
+    ;
 nomeConceito: PALAVRA
     ;
 descr: PALAVRA+
     ;
 idRecurso: IDRECURSO
     ;
-
 nomeRecurso: PALAVRA
-           ;
-
-curso: PALAVRA+;
-
+    ;
+curso: PALAVRA
+    ;
 numero: NUMEROALUNO
-       ;
+    ;
 
 
 // ------------------------------------------ LEXER ---------------------------------------
@@ -102,12 +99,11 @@ NUM: ('0'..'9')+ //[0-9]+
    ;
 NUMEROALUNO: ('A'|'PG')[0-9]+
     ;
-CONCEITO: [a-zA-Z]('+'|'#')*
-    ;
+
 IDRECURSO: ('rA')[0-9]+
     ;
 IDCONCEITO: ('cPrg')[0-9]+
     ;
-PALAVRA: [a-zA-Z][a-zA-Z0-9]*
+PALAVRA: [a-zA-Z][a-zA-Z0-9]*('+'|'#')*
        ;
 WS: ('\r'? '\n' | ' ' | '\t')+ -> skip;
