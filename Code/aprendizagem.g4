@@ -27,8 +27,8 @@ listaAlunos:
     (PONTOVIRGULA aL)*
     ;
 listaConceitos:
-    conceito
-    (PONTOVIRGULA conceito)*
+    cProg
+    (PONTOVIRGULA cProg)*
     ;
 rA: idRecurso nomeRecurso descr idadeIdeal caracteristicas
     {
@@ -48,7 +48,7 @@ aL: nomeAluno numero idadeAluno caracteristicas
      System.out.println("------------");
     }
     ;
-conceito: idConceito nomeConceito curso
+cProg: idConceito nomeConceito curso
     {
     System.out.println("ID: " + $idConceito.text);
     System.out.println("Conceito: " + $nomeConceito.text);
@@ -62,13 +62,7 @@ caracteristicas returns [ArrayList<String> listaCarateristicasAluno = new ArrayL
                                 else System.out.println("Caracteristica: " + $caracteristica.text);}
      RPAREN
      ;
-
-temRecurso: numero idRecurso
-          ;
-
-temConceito: idRecurso idConceito
-           ;
-
+     
 idadeAluno: NUM
      ;
 idadeIdeal: NUM
