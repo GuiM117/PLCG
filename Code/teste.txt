@@ -6,34 +6,29 @@ maria PG39292 21 [competitividade, concentracao, motivacao, confianca];
 miguel A546734 18 [inseguranca, preocupacao].
 
 RECURSOS
-r1 TipoTimidez Descricao1 17 [Trabalhos em Grupo, Feedbacks constantes];
-r2 TipoDesmotivacao Descricao2 20 [Tutoriais, Representações visuais/animações];
-r3 TipoParticipacao Descricao3 23 [Momentos debate, Trabalhos com existência de pontuações, Atribuir responsabilidades aos alunos frequentemente];
-r4 TipoConcentracao Descricao4 18 [Cursos Online, Documentação, Exercícios aumentando o nível de dificuldade];
-r5 TipoInseguranca Descricao5 19 [Participação em fóruns ou comunidade online, tutoriais, Construir a solução passo a passo com os alunos];
-r6 TipoConfianca Descricao6 15 [Sistemas tutores inteligentes, Desafios propostos, Diário de bordo].
+rA1 TrabalhosEmGrupo Descricao1 17 [timidez];
+rA2 FeedbacksConstantes Descricao2 17 [participacao];
+rA3 Tutoriais Descricao3 20 [desmotivacao,stress];
+rA4 RepresentacoesVisuais Descricao4 20 [desconcentracao];
+rA5 Debate Descricao5 23 [participacao,competitividade];
+rA6 TutoresOnline Descricao6 18 [desmotivacao,stress,desconcentracao,inseguranca];
+rA7 DiarioSemanal Descricao7 19 [desconcentracao,confianca];
+rA8 Pesquisa Descricao8 17 [inseguranca,stress];
+rA9 ResolucaoExercicios Descricao9 17 [stress,inseguranca,preocupacao];
+rA10 PontuacaoTrabalhos Descricao10 18 [competitividade,desmotivacao,motivacao,participacao];
+rA11 ResposabilidadeAluno Descricao11 20 [desmotivacao,motivacao,confianca,participacao];
+rA12 Forum Descricao12 17 [participacao,preocupacao,timidez,inseguranca];
+rA13 DesafioSemanal Descricao13 18 [desmotivacao,motivacao,competitividade,confianca];
+rA14 TPC Descricao14 17 [stress,desconcentracao].
 
 CONCEITOS
-
-c1 C MEI
-c2 C++ MEI
-c3 PHP MEI
-c3 C# MEI
-c4 Python MEI
-c5 Java MEI
-c6 JavaScript MEI
-c7 HTML MEI
-c8 CSS MEI
-c9 Haskell MEI
-
-temRecurso: A00000 r1;
-temRecurso: A11111 r2;
-temRecurso: A22222 r3;
-temRecurso: PG39292 r4;
-temRecurso: A546734 r5;
-temRecurso: PG39292 r6;
-
-temConceito: r1 c4;
-temConceito: r2 c1;
-temConceito: r5 c3;
-temConceito: f6 c7;
+cPrg1 C MIEI;
+cPrg2 C++ MIEI;
+cPrg3 PHP MIEI;
+cPrg3 C# MIEI;
+cPrg4 Python MIEI;
+cPrg5 Java MIEI;
+cPrg6 JavaScript MIEI;
+cPrg7 HTML MIEI;
+cPrg8 CSS MIEI;
+cPrg9 Haskell MIEI.

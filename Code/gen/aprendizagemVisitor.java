@@ -10,11 +10,11 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface aprendizagemVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#main}.
+	 * Visit a parse tree produced by {@link aprendizagemParser#cNe}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMain(aprendizagemParser.MainContext ctx);
+	T visitCNe(aprendizagemParser.CNeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link aprendizagemParser#alunos}.
 	 * @param ctx the parse tree
@@ -40,29 +40,29 @@ public interface aprendizagemVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitListaRecursos(aprendizagemParser.ListaRecursosContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#recurso}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRecurso(aprendizagemParser.RecursoContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link aprendizagemParser#listaAlunos}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitListaAlunos(aprendizagemParser.ListaAlunosContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#aluno}.
+	 * Visit a parse tree produced by {@link aprendizagemParser#listaConceitos}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAluno(aprendizagemParser.AlunoContext ctx);
+	T visitListaConceitos(aprendizagemParser.ListaConceitosContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#caracteristicas}.
+	 * Visit a parse tree produced by {@link aprendizagemParser#rA}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCaracteristicas(aprendizagemParser.CaracteristicasContext ctx);
+	T visitRA(aprendizagemParser.RAContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#aL}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAL(aprendizagemParser.ALContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link aprendizagemParser#conceito}.
 	 * @param ctx the parse tree
@@ -70,11 +70,35 @@ public interface aprendizagemVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConceito(aprendizagemParser.ConceitoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#idade}.
+	 * Visit a parse tree produced by {@link aprendizagemParser#caracteristicas}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIdade(aprendizagemParser.IdadeContext ctx);
+	T visitCaracteristicas(aprendizagemParser.CaracteristicasContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#temRecurso}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTemRecurso(aprendizagemParser.TemRecursoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#temConceito}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTemConceito(aprendizagemParser.TemConceitoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#idadeAluno}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdadeAluno(aprendizagemParser.IdadeAlunoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#idadeIdeal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdadeIdeal(aprendizagemParser.IdadeIdealContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link aprendizagemParser#caracteristica}.
 	 * @param ctx the parse tree
@@ -82,11 +106,23 @@ public interface aprendizagemVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitCaracteristica(aprendizagemParser.CaracteristicaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#nome}.
+	 * Visit a parse tree produced by {@link aprendizagemParser#nomeAluno}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitNome(aprendizagemParser.NomeContext ctx);
+	T visitNomeAluno(aprendizagemParser.NomeAlunoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#idConceito}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdConceito(aprendizagemParser.IdConceitoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#nomeConceito}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNomeConceito(aprendizagemParser.NomeConceitoContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link aprendizagemParser#descr}.
 	 * @param ctx the parse tree
@@ -94,11 +130,17 @@ public interface aprendizagemVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDescr(aprendizagemParser.DescrContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link aprendizagemParser#id}.
+	 * Visit a parse tree produced by {@link aprendizagemParser#idRecurso}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitId(aprendizagemParser.IdContext ctx);
+	T visitIdRecurso(aprendizagemParser.IdRecursoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link aprendizagemParser#nomeRecurso}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNomeRecurso(aprendizagemParser.NomeRecursoContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link aprendizagemParser#curso}.
 	 * @param ctx the parse tree

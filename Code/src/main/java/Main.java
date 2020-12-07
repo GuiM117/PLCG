@@ -10,7 +10,7 @@ public class Main {
             aprendizagemLexer lexer = new aprendizagemLexer(CharStreams.fromFileName("C:\\Users\\Kenny\\Desktop\\PLCG\\teste.txt"));
             CommonTokenStream stream = new CommonTokenStream(lexer);
             aprendizagemParser parser = new aprendizagemParser(stream);
-            parser.alunos();
+            parser.cNe();
         } catch (IOException e) {
             e.printStackTrace();
         }

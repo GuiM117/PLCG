@@ -15,13 +15,13 @@ public class aprendizagemBaseListener implements aprendizagemListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMain(aprendizagemParser.MainContext ctx) { }
+	@Override public void enterCNe(aprendizagemParser.CNeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMain(aprendizagemParser.MainContext ctx) { }
+	@Override public void exitCNe(aprendizagemParser.CNeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -75,18 +75,6 @@ public class aprendizagemBaseListener implements aprendizagemListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRecurso(aprendizagemParser.RecursoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitRecurso(aprendizagemParser.RecursoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterListaAlunos(aprendizagemParser.ListaAlunosContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -99,25 +87,37 @@ public class aprendizagemBaseListener implements aprendizagemListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAluno(aprendizagemParser.AlunoContext ctx) { }
+	@Override public void enterListaConceitos(aprendizagemParser.ListaConceitosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAluno(aprendizagemParser.AlunoContext ctx) { }
+	@Override public void exitListaConceitos(aprendizagemParser.ListaConceitosContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCaracteristicas(aprendizagemParser.CaracteristicasContext ctx) { }
+	@Override public void enterRA(aprendizagemParser.RAContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCaracteristicas(aprendizagemParser.CaracteristicasContext ctx) { }
+	@Override public void exitRA(aprendizagemParser.RAContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAL(aprendizagemParser.ALContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAL(aprendizagemParser.ALContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -135,13 +135,61 @@ public class aprendizagemBaseListener implements aprendizagemListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIdade(aprendizagemParser.IdadeContext ctx) { }
+	@Override public void enterCaracteristicas(aprendizagemParser.CaracteristicasContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIdade(aprendizagemParser.IdadeContext ctx) { }
+	@Override public void exitCaracteristicas(aprendizagemParser.CaracteristicasContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTemRecurso(aprendizagemParser.TemRecursoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTemRecurso(aprendizagemParser.TemRecursoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTemConceito(aprendizagemParser.TemConceitoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTemConceito(aprendizagemParser.TemConceitoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdadeAluno(aprendizagemParser.IdadeAlunoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdadeAluno(aprendizagemParser.IdadeAlunoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdadeIdeal(aprendizagemParser.IdadeIdealContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdadeIdeal(aprendizagemParser.IdadeIdealContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -159,13 +207,37 @@ public class aprendizagemBaseListener implements aprendizagemListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNome(aprendizagemParser.NomeContext ctx) { }
+	@Override public void enterNomeAluno(aprendizagemParser.NomeAlunoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNome(aprendizagemParser.NomeContext ctx) { }
+	@Override public void exitNomeAluno(aprendizagemParser.NomeAlunoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdConceito(aprendizagemParser.IdConceitoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdConceito(aprendizagemParser.IdConceitoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNomeConceito(aprendizagemParser.NomeConceitoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNomeConceito(aprendizagemParser.NomeConceitoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -183,13 +255,25 @@ public class aprendizagemBaseListener implements aprendizagemListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterId(aprendizagemParser.IdContext ctx) { }
+	@Override public void enterIdRecurso(aprendizagemParser.IdRecursoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitId(aprendizagemParser.IdContext ctx) { }
+	@Override public void exitIdRecurso(aprendizagemParser.IdRecursoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNomeRecurso(aprendizagemParser.NomeRecursoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNomeRecurso(aprendizagemParser.NomeRecursoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

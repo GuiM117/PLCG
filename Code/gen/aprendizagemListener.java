@@ -7,15 +7,15 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface aprendizagemListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#main}.
+	 * Enter a parse tree produced by {@link aprendizagemParser#cNe}.
 	 * @param ctx the parse tree
 	 */
-	void enterMain(aprendizagemParser.MainContext ctx);
+	void enterCNe(aprendizagemParser.CNeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#main}.
+	 * Exit a parse tree produced by {@link aprendizagemParser#cNe}.
 	 * @param ctx the parse tree
 	 */
-	void exitMain(aprendizagemParser.MainContext ctx);
+	void exitCNe(aprendizagemParser.CNeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link aprendizagemParser#alunos}.
 	 * @param ctx the parse tree
@@ -57,16 +57,6 @@ public interface aprendizagemListener extends ParseTreeListener {
 	 */
 	void exitListaRecursos(aprendizagemParser.ListaRecursosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#recurso}.
-	 * @param ctx the parse tree
-	 */
-	void enterRecurso(aprendizagemParser.RecursoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#recurso}.
-	 * @param ctx the parse tree
-	 */
-	void exitRecurso(aprendizagemParser.RecursoContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link aprendizagemParser#listaAlunos}.
 	 * @param ctx the parse tree
 	 */
@@ -77,25 +67,35 @@ public interface aprendizagemListener extends ParseTreeListener {
 	 */
 	void exitListaAlunos(aprendizagemParser.ListaAlunosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#aluno}.
+	 * Enter a parse tree produced by {@link aprendizagemParser#listaConceitos}.
 	 * @param ctx the parse tree
 	 */
-	void enterAluno(aprendizagemParser.AlunoContext ctx);
+	void enterListaConceitos(aprendizagemParser.ListaConceitosContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#aluno}.
+	 * Exit a parse tree produced by {@link aprendizagemParser#listaConceitos}.
 	 * @param ctx the parse tree
 	 */
-	void exitAluno(aprendizagemParser.AlunoContext ctx);
+	void exitListaConceitos(aprendizagemParser.ListaConceitosContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#caracteristicas}.
+	 * Enter a parse tree produced by {@link aprendizagemParser#rA}.
 	 * @param ctx the parse tree
 	 */
-	void enterCaracteristicas(aprendizagemParser.CaracteristicasContext ctx);
+	void enterRA(aprendizagemParser.RAContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#caracteristicas}.
+	 * Exit a parse tree produced by {@link aprendizagemParser#rA}.
 	 * @param ctx the parse tree
 	 */
-	void exitCaracteristicas(aprendizagemParser.CaracteristicasContext ctx);
+	void exitRA(aprendizagemParser.RAContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#aL}.
+	 * @param ctx the parse tree
+	 */
+	void enterAL(aprendizagemParser.ALContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#aL}.
+	 * @param ctx the parse tree
+	 */
+	void exitAL(aprendizagemParser.ALContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link aprendizagemParser#conceito}.
 	 * @param ctx the parse tree
@@ -107,15 +107,55 @@ public interface aprendizagemListener extends ParseTreeListener {
 	 */
 	void exitConceito(aprendizagemParser.ConceitoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#idade}.
+	 * Enter a parse tree produced by {@link aprendizagemParser#caracteristicas}.
 	 * @param ctx the parse tree
 	 */
-	void enterIdade(aprendizagemParser.IdadeContext ctx);
+	void enterCaracteristicas(aprendizagemParser.CaracteristicasContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#idade}.
+	 * Exit a parse tree produced by {@link aprendizagemParser#caracteristicas}.
 	 * @param ctx the parse tree
 	 */
-	void exitIdade(aprendizagemParser.IdadeContext ctx);
+	void exitCaracteristicas(aprendizagemParser.CaracteristicasContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#temRecurso}.
+	 * @param ctx the parse tree
+	 */
+	void enterTemRecurso(aprendizagemParser.TemRecursoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#temRecurso}.
+	 * @param ctx the parse tree
+	 */
+	void exitTemRecurso(aprendizagemParser.TemRecursoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#temConceito}.
+	 * @param ctx the parse tree
+	 */
+	void enterTemConceito(aprendizagemParser.TemConceitoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#temConceito}.
+	 * @param ctx the parse tree
+	 */
+	void exitTemConceito(aprendizagemParser.TemConceitoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#idadeAluno}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdadeAluno(aprendizagemParser.IdadeAlunoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#idadeAluno}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdadeAluno(aprendizagemParser.IdadeAlunoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#idadeIdeal}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdadeIdeal(aprendizagemParser.IdadeIdealContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#idadeIdeal}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdadeIdeal(aprendizagemParser.IdadeIdealContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link aprendizagemParser#caracteristica}.
 	 * @param ctx the parse tree
@@ -127,15 +167,35 @@ public interface aprendizagemListener extends ParseTreeListener {
 	 */
 	void exitCaracteristica(aprendizagemParser.CaracteristicaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#nome}.
+	 * Enter a parse tree produced by {@link aprendizagemParser#nomeAluno}.
 	 * @param ctx the parse tree
 	 */
-	void enterNome(aprendizagemParser.NomeContext ctx);
+	void enterNomeAluno(aprendizagemParser.NomeAlunoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#nome}.
+	 * Exit a parse tree produced by {@link aprendizagemParser#nomeAluno}.
 	 * @param ctx the parse tree
 	 */
-	void exitNome(aprendizagemParser.NomeContext ctx);
+	void exitNomeAluno(aprendizagemParser.NomeAlunoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#idConceito}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdConceito(aprendizagemParser.IdConceitoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#idConceito}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdConceito(aprendizagemParser.IdConceitoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#nomeConceito}.
+	 * @param ctx the parse tree
+	 */
+	void enterNomeConceito(aprendizagemParser.NomeConceitoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#nomeConceito}.
+	 * @param ctx the parse tree
+	 */
+	void exitNomeConceito(aprendizagemParser.NomeConceitoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link aprendizagemParser#descr}.
 	 * @param ctx the parse tree
@@ -147,15 +207,25 @@ public interface aprendizagemListener extends ParseTreeListener {
 	 */
 	void exitDescr(aprendizagemParser.DescrContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link aprendizagemParser#id}.
+	 * Enter a parse tree produced by {@link aprendizagemParser#idRecurso}.
 	 * @param ctx the parse tree
 	 */
-	void enterId(aprendizagemParser.IdContext ctx);
+	void enterIdRecurso(aprendizagemParser.IdRecursoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link aprendizagemParser#id}.
+	 * Exit a parse tree produced by {@link aprendizagemParser#idRecurso}.
 	 * @param ctx the parse tree
 	 */
-	void exitId(aprendizagemParser.IdContext ctx);
+	void exitIdRecurso(aprendizagemParser.IdRecursoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link aprendizagemParser#nomeRecurso}.
+	 * @param ctx the parse tree
+	 */
+	void enterNomeRecurso(aprendizagemParser.NomeRecursoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link aprendizagemParser#nomeRecurso}.
+	 * @param ctx the parse tree
+	 */
+	void exitNomeRecurso(aprendizagemParser.NomeRecursoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link aprendizagemParser#curso}.
 	 * @param ctx the parse tree
