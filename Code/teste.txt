@@ -3,7 +3,7 @@ ana A00000 25 [timidez,desconcentracao];
 joao A11111 24 [desmotivacao,stress];
 xico A22222 23 [participacao,confianca];
 maria PG39292 21 [competitividade, concentracao, motivacao, confianca];
-miguel A546734 18 [inseguranca, preocupacao].
+miguel A546734 18 [inseguranca, preocupacao]
 
 RECURSOS
 rA1 TrabalhosEmGrupo Descricao1 17 [timidez];
@@ -19,7 +19,7 @@ rA10 PontuacaoTrabalhos Descricao10 18 [competitividade,desmotivacao,motivacao,p
 rA11 ResposabilidadeAluno Descricao11 20 [desmotivacao,motivacao,confianca,participacao];
 rA12 Forum Descricao12 17 [participacao,preocupacao,timidez,inseguranca];
 rA13 DesafioSemanal Descricao13 18 [desmotivacao,motivacao,competitividade,confianca];
-rA14 TPC Descricao14 17 [stress,desconcentracao].
+rA14 TPC Descricao14 17 [stress,desconcentracao]
 
 CONCEITOS
 cPrg1 C MIEI;
@@ -31,4 +31,4 @@ cPrg5 Java MIEI;
 cPrg6 JavaScript MIEI;
 cPrg7 HTML MIEI;
 cPrg8 CSS MIEI;
-cPrg9 Haskell MIEI.
+cPrg9 Haskell MIEI
