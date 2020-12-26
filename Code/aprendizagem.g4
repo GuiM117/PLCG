@@ -5,30 +5,45 @@ grammar aprendizagem;
 }
 
 @members{
-         public class Aluno{
-                     String numero;
-                     String nomeAluno;
-                     String idadeAluno;
-                     List<String> caracteristicas = new ArrayList<>();
+         public class Recurso{
+            String id;
+            String nome;
+            String descricao;
+            String idadeIdeal;
+            List<String> caracteristicas;
          
-         //contrutor Aluno
-         /*
-         public Aluno(String num, String nome, String i){
-            this.numero=num;
-            this.nomeAluno=nome;
-            this.idadeAluno=i;
-         }
-         */
-           public String toString(){
-                 StringBuffer sb = new StringBuffer();
-                 sb.append(this.numero+"; ");
-                 sb.append(this.nomeAluno+"; ");
-                 sb.append(this.idadeAluno+". ");
-                 return sb.toString();
-                 }
-           }
-}
+            public Recurso(String id, String nome, String descricao, String idadeIdeal){
+               this.id = id;
+               this.nome = nome;
+               this.descricao = descricao;
+               this.idadeIdeal = idadeIdeal;
+            }
+
+            public Recurso(String id, String nome, String descricao, String idadeIdeal, List<String> caracteristicas){
+                this.id = id;
+                this.nome = nome;
+                this.descricao = descricao;
+                this.idadeIdeal = idadeIdeal;
+                this.caracteristicas = new ArrayList<String>();//is there anyway I can do this here instead of 6 lines up?
+                this.caracteristicas = caracteristicas;
+            }
+        
+        }
          
+        public class Aluno{
+            String nomeAluno;
+            String numero;
+            String idadeAluno;
+            List<String> caracteristicas = new ArrayList<String>();
+            
+            public Aluno(String nomeAluno, String numero, String idadeAluno, List<String> caracteristicas){   
+                this.nomeAluno = nomeAluno;                                                                                           
+                this.numero = numero;
+                this.idadeAluno = idadeAluno;
+                this.caracteristicas = caracteristicas;
+            }
+        }
+    } 
 
 
 // ------------------------------------------ PARSER ---------------------------------------
@@ -50,10 +65,12 @@ listaAlunos
         HashMap<String, Aluno> aux = new HashMap<String, Aluno>(); 
        }
 @after {
-        System.out.print("Numero de Alunos: "+$listaAlunos.contaAlunos);
         //Imprime HashMap de Alunos
         aux.forEach((k,v) -> {
-            System.out.println(" KEY: "+k + " VALUE: [" + v + v.caracteristicas+"]");
+            System.out.println("HMA KEY: " + k + " VALUE: [ "+v.nomeAluno+v.numero+v.idadeAluno+"]");
+            for(int i = 0; i < v.caracteristicas.size(); i++) {   
+                System.out.print("CARACTERISTICA-A{"+v.caracteristicas.get(i)+"}");
+           }
         });
        }
         
@@ -72,22 +89,13 @@ aluno [HashMap<String,Aluno> alunosHashIn]
 @after {
         $aluno.alunosHashOut = $aluno.alunosHashIn;
        }
-    : nomeAluno numero idadeAluno c=caracteristicas
+    : nomeAluno numero idadeAluno caracteristicas
     {
-     //Usar contrutor Aluno a = new Aluno($numero.text, $nomeAluno.text, $idadeAluno.text);
-     Aluno a = new Aluno();
-     a.numero=$numero.text;
-     a.nomeAluno=$nomeAluno.text;
-     a.idadeAluno=$idadeAluno.text;
-     //importante
-     a.caracteristicas=$caracteristicas.caracteristicasOut;
-     //Imprime ArrayList características do aluno
-     for(int i = 0; i < a.caracteristicas.size(); i++) {   
-            System.out.print("{"+a.caracteristicas.get(i)+"}");
-     }
+     Aluno a = new Aluno($nomeAluno.text, $numero.text, $idadeAluno.text, $caracteristicas.caracteristicasOut);
      //adicionar Aluno ao HashMap
      $aluno.alunosHashIn.put($numero.text,a);
 
+     System.out.println("------------");
      System.out.println("Aluno: " + $nomeAluno.text);
      System.out.println("numero: " + $numero.text);
      System.out.println("Idade: " + $idadeAluno.text);
@@ -104,13 +112,40 @@ recursos: RECURSOS
                   }
    ;
 
-listaRecursos:
-    rA
-    (PONTOVIRGULA rA)*
+listaRecursos
+@init  {
+        HashMap<String, Recurso> aux = new HashMap<String, Recurso>(); 
+       }
+@after {
+        //Imprime HashMap de Recursos
+        aux.forEach((k,v) -> {
+            System.out.println("HMR KEY: " + k + " VALUE: [ "+v.id+v.nome+v.descricao+v.idadeIdeal+"]");
+            for(int i = 0; i < v.caracteristicas.size(); i++) {   
+                System.out.print("CARACTERISTICA-R{"+v.caracteristicas.get(i)+"}");
+           }
+        });
+       }  
+    
+      : r1 = rA[aux] {
+                aux=$r1.recursoHashOut;
+             }
+   (';' r2 = rA[aux]{
+                aux=$r2.recursoHashOut;
+             })*
     ;
 
-rA: idRecurso nomeRecurso descr idadeIdeal caracteristicas
+rA  [HashMap<String,Recurso> recursoHashIn]
+      returns[HashMap<String,Recurso> recursoHashOut] 
+@after{
+        $rA.recursoHashOut=$rA.recursoHashIn;
+      }
+    : idRecurso nomeRecurso descr idadeIdeal caracteristicas
     {
+    Recurso r = new Recurso($idRecurso.text, $nomeRecurso.text, $descr.text, $idadeIdeal.text, $caracteristicas.caracteristicasOut);
+    //adicionar Recurso ao HashMap
+    $rA.recursoHashIn.put($idRecurso.text,r);
+
+    System.out.println("------------");
     System.out.println("ID: " + $idRecurso.text);
     System.out.println("Recurso: " + $nomeRecurso.text);
     System.out.println("Descrição: " + $descr.text);
@@ -123,10 +158,10 @@ rA: idRecurso nomeRecurso descr idadeIdeal caracteristicas
 //conceitos------------------------------------------------------------------------------------
 conceitos: CONCEITOS
     listaConceitos{
-                    System.out.print("Processar CONCEITOS");
-                   }
+                   // System.out.print("Processar CONCEITOS");
+                  }
     ;
-
+//Recurso ensina um conceito de Programacao
 listaConceitos:
     cProg
     (';' cProg)*
@@ -134,6 +169,7 @@ listaConceitos:
 
 cProg: idConceito nomeConceito curso
     {
+    System.out.println("------------");
     System.out.println("ID: " + $idConceito.text);
     System.out.println("Conceito: " + $nomeConceito.text);
     System.out.println("Curso: " + $curso.text);
@@ -142,9 +178,10 @@ cProg: idConceito nomeConceito curso
     ;
 
 //caracteristicas------------------------------------------------------------------------------
+//IMPORTANTE- ao adicionar o range (pode ser de 0-10/100) tem de se criar o objeto caracterista, e fica ArrayList<Caracteristica> aux
+
 caracteristicas returns [ArrayList<String> caracteristicasOut]
 @init    {
-          System.out.println("INIT");
           ArrayList<String> aux = new ArrayList<String>(); 
          }
 @after { 
@@ -152,18 +189,23 @@ caracteristicas returns [ArrayList<String> caracteristicasOut]
        }    
     : LPAREN 
            caracteristica {
-                           System.out.print("<c1 "+$caracteristica.car+" c1>");
+                           System.out.print("<c1 "+$caracteristica.car+"="+$caracteristica.ran+ "c1>");
+                           //Caracteristica
                            aux.add($caracteristica.car);
                           } 
       (',' caracteristica {
-                           System.out.print("<c2 "+$caracteristica.car+" c2>");
+                           System.out.print("<c2 "+$caracteristica.car+"="+$caracteristica.ran+ " c2>");
                            aux.add($caracteristica.car);
                           })*
       RPAREN
      ;
 
-caracteristica returns[String car]
-    : PALAVRA { $caracteristica.car = $PALAVRA.text;}
+//IMPORTANTE - está caracteristica=range para testar, (caracteristica,range) 
+caracteristica returns[String car, String ran]
+    : PALAVRA '=' range{ 
+                        $caracteristica.car = $PALAVRA.text;
+                        $caracteristica.ran = $PALAVRA.text;
+                       }
     ;
 
 //--------------------------------------------------------------------------------------------
@@ -188,6 +230,8 @@ curso: PALAVRA
     ;
 numero: NUMEROALUNO
     ;
+range: NUM
+    ;
 
 // ------------------------------------------ LEXER ---------------------------------------
 ALUNOS: [aA][lL][uU][nN][oO][sS];
@@ -202,7 +246,6 @@ NUM: ('0'..'9')+ //[0-9]+
    ;
 NUMEROALUNO: ('A'|'PG')[0-9]+
     ;
-
 IDRECURSO: ('rA')[0-9]+
     ;
 IDCONCEITO: ('cPrg')[0-9]+

@@ -1,25 +1,25 @@
 ALUNOS
-ana A00000 25 [timidez,desconcentracao];
-joao A11111 24 [desmotivacao,stress];
-xico A22222 23 [participacao,confianca];
-maria PG39292 21 [competitividade, concentracao, motivacao, confianca];
-miguel A546734 18 [inseguranca, preocupacao]
+ana A00000 25 [timidez=5,desconcentracao=2];
+joao A11111 24 [desmotivacao=1,stress=5];
+xico A22222 23 [participacao=3,confianca=7];
+maria PG39292 21 [competitividade=7, concentracao=7, motivacao=8, confianca=7];
+miguel A546734 18 [inseguranca=2, preocupacao=6]
 
 RECURSOS
-rA1 TrabalhosEmGrupo Descricao1 17 [timidez];
-rA2 FeedbacksConstantes Descricao2 17 [participacao];
-rA3 Tutoriais Descricao3 20 [desmotivacao,stress];
-rA4 RepresentacoesVisuais Descricao4 20 [desconcentracao];
-rA5 Debate Descricao5 23 [participacao,competitividade];
-rA6 TutoresOnline Descricao6 18 [desmotivacao,stress,desconcentracao,inseguranca];
-rA7 DiarioSemanal Descricao7 19 [desconcentracao,confianca];
-rA8 Pesquisa Descricao8 17 [inseguranca,stress];
-rA9 ResolucaoExercicios Descricao9 17 [stress,inseguranca,preocupacao];
-rA10 PontuacaoTrabalhos Descricao10 18 [competitividade,desmotivacao,motivacao,participacao];
-rA11 ResposabilidadeAluno Descricao11 20 [desmotivacao,motivacao,confianca,participacao];
-rA12 Forum Descricao12 17 [participacao,preocupacao,timidez,inseguranca];
-rA13 DesafioSemanal Descricao13 18 [desmotivacao,motivacao,competitividade,confianca];
-rA14 TPC Descricao14 17 [stress,desconcentracao]
+rA1 TrabalhosEmGrupo Descricao1 17 [timidez=1];
+rA2 FeedbacksConstantes Descricao2 17 [participaca=5];
+rA3 Tutoriais Descricao3 20 [desmotivacao=1,stress=7];
+rA4 RepresentacoesVisuais Descricao4 20 [desconcentracao=8];
+rA5 Debate Descricao5 23 [participacao=6,competitividade=3];
+rA6 TutoresOnline Descricao6 18 [desmotivacao=4,stress=6,desconcentracao=4,inseguranca=3];
+rA7 DiarioSemanal Descricao7 19 [desconcentracao=1,confianca=4];
+rA8 Pesquisa Descricao8 17 [inseguranca=4,stress=1];
+rA9 ResolucaoExercicios Descricao9 17 [stress=3,inseguranca=21,preocupacao=50];
+rA10 PontuacaoTrabalhos Descricao10 18 [competitividade=20,desmotivacao=20,motivacao=10,participacao=60];
+rA11 ResposabilidadeAluno Descricao11 20 [desmotivacao=3,motivacao=10,confianca=2,participacao=6];
+rA12 Forum Descricao12 17 [participacao=40,preocupacao=1,timidez=5,inseguranca=2];
+rA13 DesafioSemanal Descricao13 18 [desmotivacao=5,motivacao=3,competitividade=7,confianca=8];
+rA14 TPC Descricao14 17 [stress=10,desconcentracao=4]
 
 CONCEITOS
 cPrg1 C MIEI;
