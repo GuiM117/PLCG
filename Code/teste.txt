@@ -22,13 +22,13 @@ rA13 DesafioSemanal Descricao13 18 [desmotivacao=5,motivacao=3,competitividade=7
 rA14 TPC Descricao14 17 [stress=10,desconcentracao=4]
 
 CONCEITOS
-cPrg1 C MIEI;
-cPrg2 C++ MIEI;
-cPrg3 PHP MIEI;
-cPrg3 C# MIEI;
-cPrg4 Python MIEI;
-cPrg5 Java MIEI;
-cPrg6 JavaScript MIEI;
-cPrg7 HTML MIEI;
-cPrg8 CSS MIEI;
-cPrg9 Haskell MIEI
+cPrg1 C MIEI [Tokens, Identifiers, Constants, Operators, DataTypes, Variables, TypeCasting];
+cPrg2 C++ MIEI [Functions, Classes, Objects, Operators, DataTypes, Variable, Pointers];
+cPrg3 PHP MIEI [Forms, Operators, RegEx, Variable,  Classes, Objects, Constructor];
+cPrg3 C# MIEI [Methods, Classes, Operators, DataTypes, Variables, TypeCasting];
+cPrg4 Python MIEI [Operators, DataTypes, Variables, TypeCasting, Modules, Iterators];
+cPrg5 Java MIEI [Methods, Classes, Objects, Operators, DataTypes, Variable, DataEstructures];
+cPrg6 JavaScript MIEI [Operators, DataTypes, Variables, Objects, Functions, Classes, Async];
+cPrg7 HTML MIEI [Headings, Attributes, Styles, Forms, Graphics, Media, Paragraph];
+cPrg8 CSS MIEI [Selectors, Borders, Margins, Padding, Tables, NavigationBar, Forms];
+cPrg9 Haskell MIEI [IO, DataEstructures, Monads, RecursiveFunction, Optics, morphism, Functors];

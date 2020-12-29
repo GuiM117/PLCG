@@ -167,7 +167,7 @@ listaConceitos:
     (';' cProg)*
     ;
 
-cProg: idConceito nomeConceito curso
+cProg: idConceito nomeConceito curso listaSubConceitos
     {
     System.out.println("------------");
     System.out.println("ID: " + $idConceito.text);
@@ -176,13 +176,18 @@ cProg: idConceito nomeConceito curso
     System.out.println("------------");
     }
     ;
+//Conceitos abordados pela linguagem de Programação
+listaSubConceitos:
+    subConceito
+    (';' subConceito)*
+    ;
 
 //caracteristicas------------------------------------------------------------------------------
 //IMPORTANTE- ao adicionar o range (pode ser de 0-10/100) tem de se criar o objeto caracterista, e fica ArrayList<Caracteristica> aux
 
 caracteristicas returns [ArrayList<String> caracteristicasOut]
 @init    {
-          ArrayList<String> aux = new ArrayList<String>(); 
+          ArrayList<String> aux = new ArrayList<String>();
          }
 @after { 
          $caracteristicas.caracteristicasOut = aux;
@@ -219,6 +224,8 @@ nomeAluno: PALAVRA
 idConceito: IDCONCEITO
     ;
 nomeConceito: PALAVRA
+    ;
+subConceito: PALAVRA
     ;
 descr: PALAVRA+
     ;
