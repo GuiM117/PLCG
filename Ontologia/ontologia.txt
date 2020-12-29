@@ -1,0 +1,30 @@
+O = (C,I,H,R,P,A)
+
+C (conceitos)
+I (individuos)
+H (relaçoes)
+R (relaçoes não taxonómicas)
+P (Propriedades)
+A (Axiomas)
+
+Ontologia em OWL? 
+
+------------------------------------------
+Ontologia SeIRA
+
+Conceitos {Alunos,Recursos,Conceitos,Caracteristicas}
+
+?Individuos {"Linguagem"}
+
+Relações {ensina, aprende, possui, apropriadoPara}
+
+Triplos{
+	alunos = aprende => conceitos
+	recursos = apropriadoPara => alunos
+	alunos = possui => caracteristicas
+	recursos = ensina => alunos
+	recursos = possui => caracteristicas
+	conceito = apropriadoPara => recursos
+	"Linguagem" =iof=> Conceito 
+	
+}

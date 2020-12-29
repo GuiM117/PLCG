@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE Ontology[
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace">
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    ]>
+    <!-- CONCEITOS-->
+<Ontology>
+    <Declaration>
+        <class IRI="#Alunos"/>
+    </Declaration>
+    <Declaration>
+        <class IRI="#Recursos"/>
+    </Declaration>
+    <Declaration>
+        <class IRI="#Conceitos"/>
+    </Declaration>
+    <Declaration>
+        <class IRI="#Caracteristicas"/>
+    </Declaration>
+    <!-- RELAÇÕES-->
+    <Declaration>
+        <ObjectProperty IRI="#ensina"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aprende"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#apropriadoPara"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possui"/>
+    </Declaration>
+    <!-- ATRIBUTOS de conceitos (individuos concretizam os conceitos através da relação iof (instanceOf) ) ?-->
+    <Declaration>
+        <DataProperty IRI="#subConceito"/>
+    </Declaration>
+
+</Ontology>
