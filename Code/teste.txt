@@ -1,34 +1,23 @@
 ALUNOS
-ana A00000 25 [timidez=5,desconcentracao=2];
-joao A11111 24 [desmotivacao=1,stress=5];
-xico A22222 23 [participacao=3,confianca=7];
-maria PG39292 21 [competitividade=7, concentracao=7, motivacao=8, confianca=7];
-miguel A546734 18 [inseguranca=2, preocupacao=6]
+ana A00000 25 [(desmotivacao,4),(stress,5)];
+joao A11111 24 [(desmotivacao,1),(stress,5)];
+xico A22222 23 [(participacao,3),(confianca,7)];
+maria PG39292 21 [(competitividade,7), (concentracao,7), (motivacao,8), (confianca,7)];
+miguel A546734 18 [(inseguranca,2), (preocupacao,6)]
 
 RECURSOS
-rA1 TrabalhosEmGrupo Descricao1 17 [timidez=1];
-rA2 FeedbacksConstantes Descricao2 17 [participaca=5];
-rA3 Tutoriais Descricao3 20 [desmotivacao=1,stress=7];
-rA4 RepresentacoesVisuais Descricao4 20 [desconcentracao=8];
-rA5 Debate Descricao5 23 [participacao=6,competitividade=3];
-rA6 TutoresOnline Descricao6 18 [desmotivacao=4,stress=6,desconcentracao=4,inseguranca=3];
-rA7 DiarioSemanal Descricao7 19 [desconcentracao=1,confianca=4];
-rA8 Pesquisa Descricao8 17 [inseguranca=4,stress=1];
-rA9 ResolucaoExercicios Descricao9 17 [stress=3,inseguranca=21,preocupacao=50];
-rA10 PontuacaoTrabalhos Descricao10 18 [competitividade=20,desmotivacao=20,motivacao=10,participacao=60];
-rA11 ResposabilidadeAluno Descricao11 20 [desmotivacao=3,motivacao=10,confianca=2,participacao=6];
-rA12 Forum Descricao12 17 [participacao=40,preocupacao=1,timidez=5,inseguranca=2];
-rA13 DesafioSemanal Descricao13 18 [desmotivacao=5,motivacao=3,competitividade=7,confianca=8];
-rA14 TPC Descricao14 17 [stress=10,desconcentracao=4]
+rA1 TrabalhosEmGrupo Descricao1 17 [(participaca,8), (preocupacao,6)];
+rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)]
+
 
 CONCEITOS
-cPrg1 C MIEI;
-cPrg2 C++ MIEI;
-cPrg3 PHP MIEI;
-cPrg3 C# MIEI;
-cPrg4 Python MIEI;
-cPrg5 Java MIEI;
-cPrg6 JavaScript MIEI;
-cPrg7 HTML MIEI;
-cPrg8 CSS MIEI;
-cPrg9 Haskell MIEI
+cPrg1 C MIEI [Tokens, Identifiers, Constants, Operators, DataTypes, Variables, TypeCasting];
+cPrg2 C++ MIEI [Functions, Classes, Objects, Operators, DataTypes, Variable, Pointers];
+cPrg3 PHP MIEI [Forms, Operators, RegEx, Variable,  Classes, Objects, Constructor];
+cPrg3 C# MIEI [Methods, Classes, Operators, DataTypes, Variables, TypeCasting];
+cPrg4 Python MIEI [Operators, DataTypes, Variables, TypeCasting, Modules, Iterators];
+cPrg5 Java MIEI [Methods, Classes, Objects, Operators, DataTypes, Variable, DataEstructures];
+cPrg6 JavaScript MIEI [Operators, DataTypes, Variables, Objects, Functions, Classes, Async];
+cPrg7 HTML MIEI [Headings, Attributes, Styles, Forms, Graphics, Media, Paragraph];
+cPrg8 CSS MIEI [Selectors, Borders, Margins, Padding, Tables, NavigationBar, Forms];
+cPrg9 Haskell MIEI [IO, DataEstructures, Monads, RecursiveFunction, Optics, morphism, Functors]
