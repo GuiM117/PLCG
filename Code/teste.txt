@@ -7,17 +7,13 @@ miguel A546734 18 [(inseguranca,2), (preocupacao,6)]
 
 RECURSOS
 rA1 TrabalhosEmGrupo Descricao1 17 [(participaca,8), (preocupacao,6)];
-rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)]
-
+rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)];
+rA7 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)]
 
 CONCEITOS
-cPrg1 C MIEI [Tokens, Identifiers, Constants, Operators, DataTypes, Variables, TypeCasting];
-cPrg2 C++ MIEI [Functions, Classes, Objects, Operators, DataTypes, Variable, Pointers];
-cPrg3 PHP MIEI [Forms, Operators, RegEx, Variable,  Classes, Objects, Constructor];
-cPrg3 C# MIEI [Methods, Classes, Operators, DataTypes, Variables, TypeCasting];
-cPrg4 Python MIEI [Operators, DataTypes, Variables, TypeCasting, Modules, Iterators];
-cPrg5 Java MIEI [Methods, Classes, Objects, Operators, DataTypes, Variable, DataEstructures];
-cPrg6 JavaScript MIEI [Operators, DataTypes, Variables, Objects, Functions, Classes, Async];
-cPrg7 HTML MIEI [Headings, Attributes, Styles, Forms, Graphics, Media, Paragraph];
-cPrg8 CSS MIEI [Selectors, Borders, Margins, Padding, Tables, NavigationBar, Forms];
-cPrg9 Haskell MIEI [IO, DataEstructures, Monads, RecursiveFunction, Optics, morphism, Functors]
+[cPrg1 : rA1, rA3, rA5] C MIEI [Tokens, Identifiers, Constants, Operators, DataTypes, Variables, TypeCasting];
+[cPrg3 : rA7] PHP MIEI [Forms, Operators, RegEx, Variable,  Classes, Objects, Constructor]
+
+
+QUESTAO
+A75411 php
