@@ -32,26 +32,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#apropriadoPara -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#apropriadoPara">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eApropriadoDe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eAprendidoPor -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eAprendidoPor"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eApropriadoDe -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eApropriadoDe"/>
     
 
 
@@ -67,6 +50,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEscalaDe">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#temEscala"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePertencidoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePertencidoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence"/>
     </owl:ObjectProperty>
     
 
@@ -89,6 +80,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#possui -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#possui">
@@ -103,6 +103,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#temEscala">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
     </owl:ObjectProperty>
     
 
@@ -226,6 +227,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Modulo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Modulo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
@@ -238,15 +247,77 @@
     
 
 
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
     
 
 
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala">
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
     </owl:Class>
     
@@ -255,6 +326,14 @@
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
     
 
 
@@ -273,11 +352,31 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress"/>
         <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</SeIRa:idadeAluno>
         <SeIRa:nomeAluno>Ana</SeIRa:nomeAluno>
         <SeIRa:numeroAluno>A0000</SeIRa:numeroAluno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4"/>
+        <SeIRa:nomeCarateristica>Desmotivacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5"/>
+        <SeIRa:nomeCarateristica>Stress</SeIRa:nomeCarateristica>
     </owl:NamedIndividual>
     
 
@@ -286,11 +385,111 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress"/>
         <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</SeIRa:idadeAluno>
         <SeIRa:nomeAluno>Joao</SeIRa:nomeAluno>
         <SeIRa:numeroAluno>A1111</SeIRa:numeroAluno>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1"/>
+        <SeIRa:nomeCarateristica>Desmotivacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5"/>
+        <SeIRa:nomeCarateristica>Stress</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
+        <SeIRa:nomeCarateristica>Competividade</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
+        <SeIRa:nomeCarateristica>Concentracao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
+        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8"/>
+        <SeIRa:nomeCarateristica>Motivacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala2"/>
+        <SeIRa:nomeCarateristica>Inseguranca</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6"/>
+        <SeIRa:nomeCarateristica>Preocupacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
+        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala3"/>
+        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
     </owl:NamedIndividual>
     
 
@@ -425,6 +624,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4"/>
         <SeIRa:nomeCarateristica>Desmotivacao</SeIRa:nomeCarateristica>
     </owl:NamedIndividual>
     
@@ -533,10 +734,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#maria">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao"/>
         <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</SeIRa:idadeAluno>
         <SeIRa:nomeAluno>Maria</SeIRa:nomeAluno>
         <SeIRa:numeroAluno>PG39292</SeIRa:numeroAluno>
@@ -548,8 +749,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#miguel">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao"/>
         <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</SeIRa:idadeAluno>
         <SeIRa:nomeAluno>Miguel</SeIRa:nomeAluno>
         <SeIRa:numeroAluno>A56432</SeIRa:numeroAluno>
@@ -588,8 +789,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao"/>
+        <SeIRa:ensina rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#miguel"/>
+        <SeIRa:pertence rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg1"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao"/>
         <SeIRa:descricaoRecurso>fghhddfh</SeIRa:descricaoRecurso>
         <SeIRa:idRecurso>rA1</SeIRa:idRecurso>
         <SeIRa:idadeIdeal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</SeIRa:idadeIdeal>
@@ -598,17 +801,69 @@
     
 
 
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8"/>
+        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6"/>
+        <SeIRa:nomeCarateristica>Preocupacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
+        <SeIRa:ensina rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#maria"/>
+        <SeIRa:ensina rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#xico"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao"/>
         <SeIRa:descricaoRecurso>gfgg</SeIRa:descricaoRecurso>
         <SeIRa:idRecurso>rA2</SeIRa:idRecurso>
         <SeIRa:idadeIdeal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</SeIRa:idadeIdeal>
         <SeIRa:nomeRecurso>FeedBacks Constantes</SeIRa:nomeRecurso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
+        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8"/>
+        <SeIRa:nomeCarateristica>Motivacao</SeIRa:nomeCarateristica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
+        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5"/>
+        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
     </owl:NamedIndividual>
     
 
@@ -626,8 +881,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#xico">
         <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca"/>
+        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao"/>
         <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</SeIRa:idadeAluno>
         <SeIRa:nomeAluno>Xico</SeIRa:nomeAluno>
         <SeIRa:numeroAluno>A2222</SeIRa:numeroAluno>
