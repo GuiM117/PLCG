@@ -13,9 +13,6 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#Modulo"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#aluno"/>
     </Declaration>
     <Declaration>
@@ -56,6 +53,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#subConceito"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aprende"/>
@@ -280,10 +280,6 @@
         <NamedIndividual IRI="#xico"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#Modulo"/>
-        <Class IRI="#conceito"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#competividade"/>
         <Class IRI="#caracteristica"/>
     </SubClassOf>
@@ -318,6 +314,10 @@
     <SubClassOf>
         <Class IRI="#stress"/>
         <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#subConceito"/>
+        <Class IRI="#conceito"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#aluno"/>

@@ -1,0 +1,601 @@
+@prefix : <http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa> .
+
+<http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aprende
+:aprende rdf:type owl:ObjectProperty ;
+         owl:inverseOf :eAprendidoPor ;
+         rdfs:domain :aluno ;
+         rdfs:range :conceito .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eAprendidoPor
+:eAprendidoPor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEnsinadoPor
+:eEnsinadoPor rdf:type owl:ObjectProperty ;
+              owl:inverseOf :ensina .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEscalaDe
+:eEscalaDe rdf:type owl:ObjectProperty ;
+           owl:inverseOf :temEscala .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePertencidoPor
+:ePertencidoPor rdf:type owl:ObjectProperty ;
+                owl:inverseOf :pertence .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePossuidaPor
+:ePossuidaPor rdf:type owl:ObjectProperty ;
+              owl:inverseOf :possui .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ensina
+:ensina rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :recurso ;
+        rdfs:range :aluno .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence
+:pertence rdf:type owl:ObjectProperty ;
+          rdfs:domain :recurso ;
+          rdfs:range :conceito .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#possui
+:possui rdf:type owl:ObjectProperty ;
+        rdfs:domain :aluno ,
+                    :recurso ;
+        rdfs:range :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#temEscala
+:temEscala rdf:type owl:ObjectProperty ;
+           rdfs:domain :caracteristica ;
+           rdfs:range :escala .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#curso
+:curso rdf:type owl:DatatypeProperty ;
+       rdfs:domain :conceito .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#descricaoRecurso
+:descricaoRecurso rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :recurso .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala
+:escala rdf:type owl:DatatypeProperty ;
+        rdfs:domain :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idConceito
+:idConceito rdf:type owl:DatatypeProperty ;
+            rdfs:domain :conceito .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idRecurso
+:idRecurso rdf:type owl:DatatypeProperty ;
+           rdfs:domain :recurso .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idadeAluno
+:idadeAluno rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :aluno .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idadeIdeal
+:idadeIdeal rdf:type owl:DatatypeProperty ;
+            rdfs:domain :recurso .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeAluno
+:nomeAluno rdf:type owl:DatatypeProperty ;
+           rdfs:domain :aluno .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeCarateristica
+:nomeCarateristica rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeConceito
+:nomeConceito rdf:type owl:DatatypeProperty ;
+              rdfs:domain :conceito .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeRecurso
+:nomeRecurso rdf:type owl:DatatypeProperty ;
+             rdfs:domain :recurso .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#numeroAluno
+:numeroAluno rdf:type owl:DatatypeProperty ;
+             rdfs:domain :aluno .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno
+:aluno rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica
+:caracteristica rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade
+:competividade rdf:type owl:Class ;
+               rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito
+:conceito rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao
+:concentracao rdf:type owl:Class ;
+              rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca
+:confianca rdf:type owl:Class ;
+           rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao
+:desmotivacao rdf:type owl:Class ;
+              rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala
+:escala rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca
+:inseguranca rdf:type owl:Class ;
+             rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao
+:motivacao rdf:type owl:Class ;
+           rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao
+:participacao rdf:type owl:Class ;
+              rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao
+:preocupacao rdf:type owl:Class ;
+             rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso
+:recurso rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress
+:stress rdf:type owl:Class ;
+        rdfs:subClassOf :caracteristica .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#subConceito
+:subConceito rdf:type owl:Class ;
+             rdfs:subClassOf :conceito .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana
+:Ana rdf:type owl:NamedIndividual ,
+              :aluno ;
+     :possui :Ana_Desmotivacao ,
+             :Ana_stress ;
+     :idadeAluno 25 ;
+     :nomeAluno "Ana" ;
+     :numeroAluno "A0000" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao
+:Ana_Desmotivacao rdf:type owl:NamedIndividual ,
+                           :desmotivacao ;
+                  :temEscala :escala4 ;
+                  :nomeCarateristica "Desmotivacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress
+:Ana_stress rdf:type owl:NamedIndividual ,
+                     :stress ;
+            :temEscala :escala5 ;
+            :nomeCarateristica "Stress" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao
+:Joao rdf:type owl:NamedIndividual ,
+               :aluno ;
+      :possui :Joao_Desmotivacao ,
+              :Joao_stress ;
+      :idadeAluno 24 ;
+      :nomeAluno "Joao" ;
+      :numeroAluno "A1111" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao
+:Joao_Desmotivacao rdf:type owl:NamedIndividual ,
+                            :desmotivacao ;
+                   :temEscala :escala1 ;
+                   :nomeCarateristica "Desmotivacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress
+:Joao_stress rdf:type owl:NamedIndividual ,
+                      :stress ;
+             :temEscala :escala5 ;
+             :nomeCarateristica "Stress" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade
+:Maria_Competividade rdf:type owl:NamedIndividual ,
+                              :competividade ;
+                     :temEscala :escala7 ;
+                     :nomeCarateristica "Competividade" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao
+:Maria_Concentracao rdf:type owl:NamedIndividual ,
+                             :concentracao ;
+                    :temEscala :escala7 ;
+                    :nomeCarateristica "Concentracao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca
+:Maria_Confianca rdf:type owl:NamedIndividual ,
+                          :confianca ;
+                 :temEscala :escala7 ;
+                 :nomeCarateristica "Confianca" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao
+:Maria_Motivacao rdf:type owl:NamedIndividual ,
+                          :motivacao ;
+                 :temEscala :escala8 ;
+                 :nomeCarateristica "Motivacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca
+:Miguel_Inseguranca rdf:type owl:NamedIndividual ,
+                             :inseguranca ;
+                    :temEscala :escala2 ;
+                    :nomeCarateristica "Inseguranca" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao
+:Miguel_Preocupacao rdf:type owl:NamedIndividual ,
+                             :preocupacao ;
+                    :temEscala :escala6 ;
+                    :nomeCarateristica "Preocupacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca
+:Xico_Confianca rdf:type owl:NamedIndividual ,
+                         :confianca ;
+                :temEscala :escala7 ;
+                :nomeCarateristica "Confianca" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao
+:Xico_Participacao rdf:type owl:NamedIndividual ,
+                            :participacao ;
+                   :temEscala :escala3 ;
+                   :nomeCarateristica "Participacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg1
+:cPrg1 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg1" ;
+       :nomeConceito "C" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg2
+:cPrg2 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg2" ;
+       :nomeConceito "c++" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg3
+:cPrg3 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg3" ;
+       :nomeConceito "PHP" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg4
+:cPrg4 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg4" ;
+       :nomeConceito "Python" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg5
+:cPrg5 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg5" ;
+       :nomeConceito "Java" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg6
+:cPrg6 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg6" ;
+       :nomeConceito "JavaScript" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg7
+:cPrg7 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg7" ;
+       :nomeConceito "HTML" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg8
+:cPrg8 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg8" ;
+       :nomeConceito "CSS" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg9
+:cPrg9 rdf:type owl:NamedIndividual ,
+                :conceito ;
+       :curso "MIEI" ;
+       :idConceito "cPrg9" ;
+       :nomeConceito "Haskell" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade
+:competividade rdf:type owl:NamedIndividual ,
+                        :caracteristica ;
+               :nomeCarateristica "Competividade" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao
+:concentracao rdf:type owl:NamedIndividual ,
+                       :caracteristica ;
+              :nomeCarateristica "Concentracao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca
+:confianca rdf:type owl:NamedIndividual ,
+                    :caracteristica ;
+           :nomeCarateristica "Confianca" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao
+:desmotivacao rdf:type owl:NamedIndividual ,
+                       :caracteristica ;
+              :temEscala :escala1 ,
+                         :escala4 ;
+              :nomeCarateristica "Desmotivacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1
+:escala1 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 1 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala10
+:escala10 rdf:type owl:NamedIndividual ,
+                   :escala ;
+          :escala 10 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala2
+:escala2 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 2 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala3
+:escala3 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 3 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4
+:escala4 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 4 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5
+:escala5 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 5 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6
+:escala6 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 6 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7
+:escala7 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 7 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8
+:escala8 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 8 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala9
+:escala9 rdf:type owl:NamedIndividual ,
+                  :escala ;
+         :escala 9 .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca
+:inseguranca rdf:type owl:NamedIndividual ,
+                      :caracteristica ;
+             :nomeCarateristica "Inseguranca" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#maria
+:maria rdf:type owl:NamedIndividual ,
+                :aluno ;
+       :possui :Maria_Competividade ,
+               :Maria_Concentracao ,
+               :Maria_Confianca ,
+               :Maria_Motivacao ;
+       :idadeAluno 21 ;
+       :nomeAluno "Maria" ;
+       :numeroAluno "PG39292" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#miguel
+:miguel rdf:type owl:NamedIndividual ,
+                 :aluno ;
+        :possui :Miguel_Inseguranca ,
+                :Miguel_Preocupacao ;
+        :idadeAluno 18 ;
+        :nomeAluno "Miguel" ;
+        :numeroAluno "A56432" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao
+:motivacao rdf:type owl:NamedIndividual ,
+                    :caracteristica ;
+           :nomeCarateristica "Motivacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao
+:participacao rdf:type owl:NamedIndividual ,
+                       :caracteristica ;
+              :nomeCarateristica "Participacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao
+:preocupacao rdf:type owl:NamedIndividual ,
+                      :caracteristica ;
+             :nomeCarateristica "Preocupacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1
+:rA1 rdf:type owl:NamedIndividual ,
+              :recurso ;
+     :ensina :miguel ;
+     :pertence :cPrg1 ;
+     :possui :rA1_participacao ,
+             :rA1_preocupacao ;
+     :descricaoRecurso "fghhddfh" ;
+     :idRecurso "rA1" ;
+     :idadeIdeal 17 ;
+     :nomeRecurso "Trabalhos em Grupo" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao
+:rA1_participacao rdf:type owl:NamedIndividual ,
+                           :participacao ;
+                  :temEscala :escala8 ;
+                  :nomeCarateristica "Participacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao
+:rA1_preocupacao rdf:type owl:NamedIndividual ,
+                          :preocupacao ;
+                 :temEscala :escala6 ;
+                 :nomeCarateristica "Preocupacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2
+:rA2 rdf:type owl:NamedIndividual ,
+              :recurso ;
+     :ensina :maria ,
+             :xico ;
+     :possui :rA2_confianca ,
+             :rA2_motivacao ,
+             :rA2_participacao ;
+     :descricaoRecurso "gfgg" ;
+     :idRecurso "rA2" ;
+     :idadeIdeal 17 ;
+     :nomeRecurso "FeedBacks Constantes" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca
+:rA2_confianca rdf:type owl:NamedIndividual ,
+                        :confianca ;
+               :temEscala :escala7 ;
+               :nomeCarateristica "Confianca" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao
+:rA2_motivacao rdf:type owl:NamedIndividual ,
+                        :motivacao ;
+               :temEscala :escala8 ;
+               :nomeCarateristica "Motivacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao
+:rA2_participacao rdf:type owl:NamedIndividual ,
+                           :participacao ;
+                  :temEscala :escala5 ;
+                  :nomeCarateristica "Participacao" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress
+:stress rdf:type owl:NamedIndividual ,
+                 :caracteristica ;
+        :nomeCarateristica "Stress" .
+
+
+###  http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#xico
+:xico rdf:type owl:NamedIndividual ,
+               :aluno ;
+      :possui :Xico_Confianca ,
+              :Xico_Participacao ;
+      :idadeAluno 23 ;
+      :nomeAluno "Xico" ;
+      :numeroAluno "A2222" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

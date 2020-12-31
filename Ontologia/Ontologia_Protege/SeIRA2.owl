@@ -227,14 +227,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Modulo -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Modulo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
@@ -333,6 +325,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#subConceito -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#subConceito">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
     </owl:Class>
     
 
