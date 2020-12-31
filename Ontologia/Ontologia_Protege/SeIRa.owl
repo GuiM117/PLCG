@@ -1,0 +1,900 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa">
+    <Prefix name="" IRI="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#aluno"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#caracteristica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#conceito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#escala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#recurso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aprende"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#apropriadoPara"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eAprendidoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eApropriadoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eEnsinadoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eEscalaDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ePossuidaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ensina"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possui"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temEscala"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#curso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descricaoRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#escala"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idConceito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idadeAluno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idadeIdeal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeAluno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeCarateristica"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeConceito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroAluno"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#competividade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#concentracao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inseguranca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#miguel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#motivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#participacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#preocupacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xico"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#escala"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#Ana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#Joao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#competividade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#concentracao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#inseguranca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#maria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#miguel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#motivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#participacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#preocupacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#recurso"/>
+        <NamedIndividual IRI="#rA1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#recurso"/>
+        <NamedIndividual IRI="#rA2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#xico"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Joao"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Joao"/>
+        <NamedIndividual IRI="#stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#competividade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#concentracao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#motivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#miguel"/>
+        <NamedIndividual IRI="#inseguranca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#miguel"/>
+        <NamedIndividual IRI="#preocupacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#participacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#preocupacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#motivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#participacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#xico"/>
+        <NamedIndividual IRI="#confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#xico"/>
+        <NamedIndividual IRI="#participacao"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#Ana"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#Ana"/>
+        <Literal>Ana</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#Ana"/>
+        <Literal>A0000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#Joao"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#Joao"/>
+        <Literal>Joao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#Joao"/>
+        <Literal>A1111</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <Literal>cPrg1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg2"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg2"/>
+        <Literal>cPrg2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg2"/>
+        <Literal>c++</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg3"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg3"/>
+        <Literal>cPrg3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg3"/>
+        <Literal>PHP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg4"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg4"/>
+        <Literal>cPrg4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg4"/>
+        <Literal>Python</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg5"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg5"/>
+        <Literal>cPrg5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg5"/>
+        <Literal>Java</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg6"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg6"/>
+        <Literal>cPrg6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg6"/>
+        <Literal>JavaScript</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg7"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg7"/>
+        <Literal>cPrg7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg7"/>
+        <Literal>HTML</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg8"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg8"/>
+        <Literal>cPrg8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg8"/>
+        <Literal>CSS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg9"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg9"/>
+        <Literal>cPrg9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg9"/>
+        <Literal>Haskell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#competividade"/>
+        <Literal>Competividade</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#concentracao"/>
+        <Literal>Concentracao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+        <Literal>Desmotivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala9"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#inseguranca"/>
+        <Literal>Inseguranca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#maria"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#maria"/>
+        <Literal>Maria</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#maria"/>
+        <Literal>PG39292</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#miguel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#miguel"/>
+        <Literal>Miguel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#miguel"/>
+        <Literal>A56432</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#motivacao"/>
+        <Literal>Motivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#participacao"/>
+        <Literal>Participacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#preocupacao"/>
+        <Literal>Preocupacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#descricaoRecurso"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal>fghhddfh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idRecurso"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal>rA1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeIdeal"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeRecurso"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal>Trabalhos em Grupo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#descricaoRecurso"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal>gfgg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idRecurso"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal>rA2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeIdeal"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeRecurso"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal>FeedBacks Constantes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#stress"/>
+        <Literal>Stress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#xico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#xico"/>
+        <Literal>Xico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#xico"/>
+        <Literal>A2222</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#apropriadoPara"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ensina"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aprende"/>
+        <ObjectProperty IRI="#eAprendidoPor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#apropriadoPara"/>
+        <ObjectProperty IRI="#eApropriadoDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eEnsinadoPor"/>
+        <ObjectProperty IRI="#ensina"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eEscalaDe"/>
+        <ObjectProperty IRI="#temEscala"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ePossuidaPor"/>
+        <ObjectProperty IRI="#possui"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aprende"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#apropriadoPara"/>
+        <Class IRI="#recurso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ensina"/>
+        <Class IRI="#recurso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possui"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possui"/>
+        <Class IRI="#recurso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temEscala"/>
+        <Class IRI="#caracteristica"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aprende"/>
+        <Class IRI="#conceito"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#apropriadoPara"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ensina"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possui"/>
+        <Class IRI="#caracteristica"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#idadeAluno"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#curso"/>
+        <Class IRI="#conceito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#descricaoRecurso"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#escala"/>
+        <Class IRI="#caracteristica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idConceito"/>
+        <Class IRI="#conceito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idRecurso"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idadeAluno"/>
+        <Class IRI="#aluno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idadeIdeal"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeAluno"/>
+        <Class IRI="#aluno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <Class IRI="#caracteristica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeConceito"/>
+        <Class IRI="#conceito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeRecurso"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroAluno"/>
+        <Class IRI="#aluno"/>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
