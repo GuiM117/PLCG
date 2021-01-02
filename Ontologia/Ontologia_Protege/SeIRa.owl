@@ -19,25 +19,49 @@
         <Class IRI="#caracteristica"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#competividade"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#conceito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#concentracao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#confianca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#desmotivacao"/>
     </Declaration>
     <Declaration>
         <Class IRI="#escala"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#inseguranca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#motivacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#participacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preocupacao"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#recurso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#subConceito"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#aprende"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#apropriadoPara"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#eAprendidoPor"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#eApropriadoDe"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#eEnsinadoPor"/>
@@ -46,10 +70,16 @@
         <ObjectProperty IRI="#eEscalaDe"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#ePertencidoPor"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#ePossuidaPor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ensina"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pertence"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#possui"/>
@@ -97,7 +127,43 @@
         <NamedIndividual IRI="#Ana"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ana_stress"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Joao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joao_stress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Xico_Participacao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cPrg1"/>
@@ -190,7 +256,22 @@
         <NamedIndividual IRI="#rA1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#rA1_participacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#rA2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2_confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2_participacao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#stress"/>
@@ -199,16 +280,100 @@
         <NamedIndividual IRI="#xico"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#escala"/>
+        <Class IRI="#competividade"/>
         <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#concentracao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#confianca"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#desmotivacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#inseguranca"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motivacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#participacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#preocupacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stress"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#subConceito"/>
+        <Class IRI="#conceito"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#aluno"/>
         <NamedIndividual IRI="#Ana"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#stress"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#aluno"/>
         <NamedIndividual IRI="#Joao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#stress"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#competividade"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#concentracao"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#confianca"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#motivacao"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#inseguranca"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#preocupacao"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#confianca"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#participacao"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#conceito"/>
@@ -331,8 +496,28 @@
         <NamedIndividual IRI="#rA1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#participacao"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#preocupacao"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#recurso"/>
         <NamedIndividual IRI="#rA2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#confianca"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#motivacao"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#participacao"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#caracteristica"/>
@@ -345,87 +530,202 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#Ana"/>
-        <NamedIndividual IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#Ana"/>
-        <NamedIndividual IRI="#stress"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+        <NamedIndividual IRI="#escala4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+        <NamedIndividual IRI="#escala5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#Joao"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Joao"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+        <NamedIndividual IRI="#escala1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+        <NamedIndividual IRI="#escala5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+        <NamedIndividual IRI="#escala2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+        <NamedIndividual IRI="#escala6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+        <NamedIndividual IRI="#escala3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
         <NamedIndividual IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#escala1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#possui"/>
-        <NamedIndividual IRI="#Joao"/>
-        <NamedIndividual IRI="#stress"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#possui"/>
-        <NamedIndividual IRI="#maria"/>
-        <NamedIndividual IRI="#competividade"/>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#escala4"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#maria"/>
-        <NamedIndividual IRI="#concentracao"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#maria"/>
-        <NamedIndividual IRI="#confianca"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#maria"/>
-        <NamedIndividual IRI="#motivacao"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#miguel"/>
-        <NamedIndividual IRI="#inseguranca"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#miguel"/>
-        <NamedIndividual IRI="#preocupacao"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ensina"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#miguel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pertence"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#cPrg1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#rA1"/>
-        <NamedIndividual IRI="#participacao"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#rA1"/>
-        <NamedIndividual IRI="#preocupacao"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+        <NamedIndividual IRI="#escala6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ensina"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#maria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ensina"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#xico"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#rA2"/>
-        <NamedIndividual IRI="#confianca"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#rA2"/>
-        <NamedIndividual IRI="#motivacao"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#rA2"/>
-        <NamedIndividual IRI="#participacao"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+        <NamedIndividual IRI="#escala5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#xico"/>
-        <NamedIndividual IRI="#confianca"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#possui"/>
         <NamedIndividual IRI="#xico"/>
-        <NamedIndividual IRI="#participacao"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#idadeAluno"/>
@@ -443,6 +743,16 @@
         <Literal>A0000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+        <Literal>Desmotivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+        <Literal>Stress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#idadeAluno"/>
         <NamedIndividual IRI="#Joao"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
@@ -456,6 +766,56 @@
         <DataProperty IRI="#numeroAluno"/>
         <NamedIndividual IRI="#Joao"/>
         <Literal>A1111</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+        <Literal>Desmotivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+        <Literal>Stress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+        <Literal>Competividade</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+        <Literal>Concentracao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+        <Literal>Motivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+        <Literal>Inseguranca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+        <Literal>Preocupacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+        <Literal>Participacao</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#curso"/>
@@ -733,6 +1093,16 @@
         <Literal>Trabalhos em Grupo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+        <Literal>Participacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+        <Literal>Preocupacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#descricaoRecurso"/>
         <NamedIndividual IRI="#rA2"/>
         <Literal>gfgg</Literal>
@@ -751,6 +1121,21 @@
         <DataProperty IRI="#nomeRecurso"/>
         <NamedIndividual IRI="#rA2"/>
         <Literal>FeedBacks Constantes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+        <Literal>Motivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+        <Literal>Participacao</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nomeCarateristica"/>
@@ -773,20 +1158,12 @@
         <Literal>A2222</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#apropriadoPara"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#ensina"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#aprende"/>
         <ObjectProperty IRI="#eAprendidoPor"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#apropriadoPara"/>
-        <ObjectProperty IRI="#eApropriadoDe"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#eEnsinadoPor"/>
@@ -797,6 +1174,10 @@
         <ObjectProperty IRI="#temEscala"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#ePertencidoPor"/>
+        <ObjectProperty IRI="#pertence"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#ePossuidaPor"/>
         <ObjectProperty IRI="#possui"/>
     </InverseObjectProperties>
@@ -805,11 +1186,11 @@
         <Class IRI="#aluno"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#apropriadoPara"/>
+        <ObjectProperty IRI="#ensina"/>
         <Class IRI="#recurso"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ensina"/>
+        <ObjectProperty IRI="#pertence"/>
         <Class IRI="#recurso"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -829,16 +1210,20 @@
         <Class IRI="#conceito"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#apropriadoPara"/>
-        <Class IRI="#aluno"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#ensina"/>
         <Class IRI="#aluno"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#pertence"/>
+        <Class IRI="#conceito"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#possui"/>
         <Class IRI="#caracteristica"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temEscala"/>
+        <Class IRI="#escala"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#idadeAluno"/>
