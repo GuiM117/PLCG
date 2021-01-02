@@ -10,10 +10,16 @@ rA1 TrabalhosEmGrupo Descricao1 17 [(participaca,8), (preocupacao,6)];
 rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)];
 rA7 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)]
 
+
 CONCEITOS
-[cPrg1 : rA1, rA3, rA5] C MIEI [Tokens, Identifiers, Constants, Operators, DataTypes, Variables, TypeCasting];
-[cPrg3 : rA7] PHP MIEI [Forms, Operators, RegEx, Variable,  Classes, Objects, Constructor]
+cPrg1 rA1 C MIEI Tokens;
+cPrg1 rA4 C MIEI Tokens;
+
+cPrg2 rA7 C MIEI Variable;
+
+cPrg3 rA9 C LCC Data;
+cPrg3 rA9 C MTM Data
 
 
 QUESTAO
-A75411 php
+A75411 cPrg3

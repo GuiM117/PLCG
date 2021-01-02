@@ -49,16 +49,25 @@ grammar aprendizagem;
         //CONCEITO---
          public class Conceito{
             String idConceito;
+            String ensina;
             String nomeConceito;
             String curso;
-            List<String> ensina = new ArrayList<String>();
-            
+            //List<String> ensina = new ArrayList<String>();
+            /*
             public Conceito(String idConceito, String nomeConceito, String curso, List<String> ensina){   
                 this.idConceito = idConceito;                                                                                           
                 this.nomeConceito = nomeConceito;
                 this.curso = curso;
                 this.ensina = ensina;
             }
+            */
+            public Conceito(String idConceito, String ensina, String nomeConceito, String curso){   
+                this.idConceito = idConceito;
+                this.ensina = ensina;
+                this.nomeConceito = nomeConceito;
+                this.curso = curso;
+            }
+            
         }
          
         public class Caracteristica{
@@ -80,15 +89,60 @@ cNe: alunos recursos conceitos questao[$alunos.alunosHash, $recursos.recursosHas
     ;
 
 
-questao [HashMap<String, Aluno> alunosHash, HashMap<String, Recurso> recursosHash, HashMap<String, Conceito> conceitosHash]
+questao [HashMap<String, Aluno> alunosHash, HashMap<String, Recurso> recursosHash, HashMap<String, List<Conceito>> conceitosHash]
 @after{
+    System.out.print("ESTRUTURAS DE DADOS");
+    
+    System.out.print("HASHMAP ALUNOS");
+    $questao.alunosHash.forEach((k,v) -> {
+        System.out.println("[KEY/ID: " + k + 
+                           " NOME: "+v.nomeAluno+
+                           " NUMERO: "+v.numero+
+                           " IDADE: "+v.idadeAluno+
+                           "]");
+        for(int i = 0; i < v.caracteristicas.size(); i++) {   
+            Caracteristica c = v.caracteristicas.get(i);
+            System.out.print("CARACTERISTICA ALUNO("+c.nomeCar+" , "+c.escala+")");
+        }
+    });
+    
+    System.out.print("HASHMAP RECURSOS");
+    $questao.recursosHash.forEach((k,v) -> {
+        System.out.println("[KEY/ID: " + k + 
+                           " NOME: "+v.nome+
+                           " DESCRICAO"+v.descricao+
+                           " IDADE IDEAL"+v.idadeIdeal+
+                           "]");
+        for(int i = 0; i < v.caracteristicas.size(); i++) {   
+            Caracteristica c = v.caracteristicas.get(i);
+            System.out.print("CARACTERISTICA RECURSO("+c.nomeCar+" , "+c.escala+")");
+       }
+    });    
+    
+    System.out.print("HASHMAP CONCEITOS");
+    $questao.conceitosHash.forEach((k,v) -> {
+        System.out.println("[KEY/ID: " + k + "]");
+        List<Conceito> conceitos = v;
+        for(int i = 0; i < v.size(); i++) {   
+            //System.out.print("CARACTERISTICA-R{"+v.caracteristicas.get(i)+"}");
+            Conceito c = v.get(i);
+            System.out.print("CONCEITOS ("+
+                                " IDCONCEITO"+c.idConceito+
+                                " NOMECONCEITO"+c.nomeConceito+
+                                " ENSINA"+c.ensina+
+                                " CURSO"+c.curso+")");
+       }
+    });    
+
 
 }
        : 'QUESTAO' 
-            //podia ficar numeroAluno nomeConceito subConceito
-            numeroAluno nomeConceito {
-                                      
-                                     }
+            numeroAluno idConceito
+                               {
+                                Aluno a = $questao.alunosHash.get($numeroAluno.text);
+                                //System.out.print("--"+"--");
+                                //System.out.print("!!!"+a.nomeAluno+"!!!");
+                               }
        ;
 
 
@@ -99,15 +153,7 @@ alunos
         HashMap<String, Aluno> aux = new HashMap<String, Aluno>(); 
        }  
 @after {
-        System.out.print("-----HASHMAP ALUNOS PRODUCAO TOP---");
-        $al.auxOut.forEach((k,v) -> {
-            System.out.println("HMAA KEY: " + k + " VALUE: [ NOME: "+v.nomeAluno+" NUMERO: "+v.numero+" IDADE: "+v.idadeAluno+"]");
-            for(int i = 0; i < v.caracteristicas.size(); i++) {   
-                //System.out.print("CARACTERISTICA-A{"+v.caracteristicas.get(i)+"}");
-                Caracteristica c = v.caracteristicas.get(i);
-                System.out.print("CARACTERISTICA-A{"+c.nomeCar+"|"+c.escala+"}");
-           }
-        });
+      
        }
     : ALUNOS
         al = listaAlunos[aux] {
@@ -119,15 +165,6 @@ listaAlunos [HashMap<String, Aluno> auxIn]
             returns[HashMap<String, Aluno> auxOut]
 @after {
         $listaAlunos.auxOut=$listaAlunos.auxIn;
-        //Imprime HashMap de Alunos
-        $listaAlunos.auxOut.forEach((k,v) -> {
-            System.out.println("HMA KEY: " + k + " VALUE: [ "+v.nomeAluno+v.numero+v.idadeAluno+"]");
-            for(int i = 0; i < v.caracteristicas.size(); i++) {   
-                //System.out.print("CARACTERISTICA-A{"+v.caracteristicas.get(i)+"}");
-                Caracteristica c = v.caracteristicas.get(i);
-                System.out.print("CARACTERISTICA-A{"+c.nomeCar+"|"+c.escala+"}");
-           }
-        });
        }
         
         : a1 = aluno[$listaAlunos.auxIn]{
@@ -167,16 +204,7 @@ recursos
         HashMap<String, Recurso> aux = new HashMap<String, Recurso>(); 
        }
 @after {
-        //Imprime HashMap de Recursos
         $recursos.recursosHash = aux;
-        aux.forEach((k,v) -> {
-            System.out.println("HMR KEY: " + k + " VALUE: [ "+v.id+v.nome+v.descricao+v.idadeIdeal+"]");
-            for(int i = 0; i < v.caracteristicas.size(); i++) {   
-                //System.out.print("CARACTERISTICA-R{"+v.caracteristicas.get(i)+"}");
-                Caracteristica c = v.caracteristicas.get(i);
-                System.out.print("CARACTERISTICA-R{"+c.nomeCar+"|"+c.escala+"}");
-           }
-        });
        }  
     
       : RECURSOS
@@ -214,20 +242,12 @@ rA  [HashMap<String,Recurso> recursoHashIn]
 
 
 conceitos
-         returns[HashMap<String, Conceito> conceitosHash]
+         returns[HashMap<String, List<Conceito>> conceitosHash]
 @init  {
-        HashMap<String, Conceito> aux = new HashMap<String, Conceito>(); 
+        HashMap<String, List<Conceito>> aux = new HashMap<String, List<Conceito>>(); 
        }
 @after {
         $conceitos.conceitosHash = aux;
-        //Imprime HashMap de Conceitos
-        aux.forEach((k,v) -> {
-            System.out.println("HMC KEY: " + k + " VALUE: [ "+v.idConceito+v.nomeConceito+v.curso+"]");
-            for(int i = 0; i < v.ensina.size(); i++) {   
-                //System.out.print("CARACTERISTICA-R{"+v.caracteristicas.get(i)+"}");
-                System.out.print("IDS RECURSOS{"+v.ensina.get(i)+"}");
-           }
-        });
        }  
     
       : CONCEITOS
@@ -240,34 +260,52 @@ conceitos
              })*
     ;
 
-cProg[HashMap<String,Conceito> conceitoHashIn]
-      returns[HashMap<String,Conceito> conceitoHashOut] 
+cProg[HashMap<String, List<Conceito>> conceitoHashIn]
+      returns[HashMap<String, List<Conceito>> conceitoHashOut] 
 @after{
         $cProg.conceitoHashOut=$cProg.conceitoHashIn;
       }
-    
-    : ensina nomeConceito curso listaSubConceitos
+                                //subConceito
+    : relacao nomeConceito curso PALAVRA
     {
-     Conceito c = new Conceito($ensina.idCon, $nomeConceito.text, $curso.text, $ensina.listaIdRec);
-     
-     //adicionar Conceito ao HashMap
-     $cProg.conceitoHashIn.put($ensina.idCon,c);
+     Conceito c = new Conceito($relacao.idCon, $relacao.idRec, $nomeConceito.text, $curso.text);        
 
+     if($cProg.conceitoHashIn.containsKey($relacao.idCon)){
+        List<Conceito> conceitos = $cProg.conceitoHashIn.get($relacao.idCon);
+        conceitos.add(c);
+        System.out.println("Key existente-Conceito inserido"+c.idConceito);
+     }else{
+        List<Conceito> conceitos = new ArrayList<Conceito>();
+        conceitos.add(c);
+        $cProg.conceitoHashIn.put($relacao.idCon, conceitos);
+        System.out.println("Nova Key-Conceito inserido"+c.idConceito);
+     }
+     
      System.out.println("------------");
-     //System.out.println("ID: " + $ensina.idCon);
-     System.out.println("ID: " + $ensina.idCon);
+     System.out.println("ID CON: " + $relacao.idCon);
+     System.out.println("ID REC: " + $relacao.idRec);
      System.out.println("Conceito: " + $nomeConceito.text);
      System.out.println("Curso: " + $curso.text);
      System.out.println("------------");
+     
     }
     ;
 
+relacao
+        returns[String idCon, String idRec]
+        : idConceito idRecurso {
+                                $relacao.idCon = $idConceito.text;
+                                $relacao.idRec = $idRecurso.text;
+                               }
+        ;
+
+/*
 ensina 
         returns[String idCon, ArrayList<String> listaIdRec]
 @init    {
           ArrayList<String> aux = new ArrayList<String>();
          }
-    : LPAREN 
+    : LPAREN
         idConceito ':' lIds = listaIdRecurso[aux] {     
                                 $ensina.idCon = $idConceito.text;
                                 $ensina.listaIdRec = $lIds.listaIdRecOut;
@@ -298,9 +336,9 @@ listaSubConceitos
        (',' subConceito)*
     RPAREN
     ;
+*/
 
-subConceito: PALAVRA
-    ;
+
 
 //caracteristicas------------------------------------------------------------------------------
 
@@ -343,12 +381,13 @@ idadeAluno: NUM
      ;
 idadeIdeal: NUM
      ;
-
 nomeAluno: PALAVRA
     ;
 idConceito: IDCONCEITO
     ;
 nomeConceito: PALAVRA
+    ;
+subConceito: PALAVRA
     ;
 descr: PALAVRA+
     ;
