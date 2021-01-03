@@ -5,6 +5,29 @@ grammar aprendizagem;
 }
 
 @members{
+         public class Questao{
+            public boolean adequa(int idadeA, int idadeR, List<Caracteristica> caracteristicasA, List<Caracteristica> caracteristicasR){
+                //verficar se a idade do recurso se adequa à idade do aluno
+                if(idadeR-idadeA <= 6 | idadeR-idadeA >= -6){
+                    //verficar se as caracteristicas do recurso se adequam às caracteristicas do aluno
+                    int c=0;
+                    for(Caracteristica cR : caracteristicasR){
+                        for(Caracteristica cA : caracteristicasA){
+                            if(cA.nomeCar.equals(cR.nomeCar)){
+                                System.out.print("=CARACTERISTICA ADEQUADA"+cA.nomeCar+cR.nomeCar+"=");
+                                return true;
+                            }else{
+                                System.out.print("=CARACTERISTICA DIFERENTE "+cA.nomeCar+cR.nomeCar+" =");                
+                            }
+                        }
+                    }
+                    return false;
+                }else{
+                    System.out.print("A IDADE DO RECURSO NAO SE ADEQUA AO ALUNO");
+                    return false;
+                }
+            }                  
+         }
          
          //RECURSO---
          public class Recurso{
@@ -26,7 +49,7 @@ grammar aprendizagem;
                 this.nome = nome;
                 this.descricao = descricao;
                 this.idadeIdeal = idadeIdeal;
-                this.caracteristicas = new ArrayList<Caracteristica>();//is there anyway I can do this here instead of 6 lines up?
+                this.caracteristicas = new ArrayList<Caracteristica>();
                 this.caracteristicas = caracteristicas;
             }
         
@@ -52,15 +75,7 @@ grammar aprendizagem;
             String ensina;
             String nomeConceito;
             String curso;
-            //List<String> ensina = new ArrayList<String>();
-            /*
-            public Conceito(String idConceito, String nomeConceito, String curso, List<String> ensina){   
-                this.idConceito = idConceito;                                                                                           
-                this.nomeConceito = nomeConceito;
-                this.curso = curso;
-                this.ensina = ensina;
-            }
-            */
+
             public Conceito(String idConceito, String ensina, String nomeConceito, String curso){   
                 this.idConceito = idConceito;
                 this.ensina = ensina;
@@ -91,6 +106,7 @@ cNe: alunos recursos conceitos questao[$alunos.alunosHash, $recursos.recursosHas
 
 questao [HashMap<String, Aluno> alunosHash, HashMap<String, Recurso> recursosHash, HashMap<String, List<Conceito>> conceitosHash]
 @after{
+    /*
     System.out.print("ESTRUTURAS DE DADOS");
     
     System.out.print("HASHMAP ALUNOS");
@@ -133,15 +149,54 @@ questao [HashMap<String, Aluno> alunosHash, HashMap<String, Recurso> recursosHas
                                 " CURSO"+c.curso+")");
        }
     });    
-
+    */
 
 }
        : 'QUESTAO' 
-            numeroAluno idConceito
-                               {
+            numeroAluno idConceito {
+
+                                System.out.print("QUESTAO");
+
+                                //Consultar caracteristicas do aluno
                                 Aluno a = $questao.alunosHash.get($numeroAluno.text);
-                                //System.out.print("--"+"--");
-                                //System.out.print("!!!"+a.nomeAluno+"!!!");
+                                if(a!=null){
+                                    List<Caracteristica> caracteristicasA = a.caracteristicas;
+
+                                    //Consultar lista de conceitos para o idConceito a ensinar
+                                    if($questao.conceitosHash.containsKey($idConceito.text)){
+                                        List<Conceito> conceitos = $questao.conceitosHash.get($idConceito.text);
+                                        List<String> adequados = new ArrayList<String>();
+                                        for(Conceito c : conceitos){
+                                            //consultar recurso do conceito
+                                            Recurso r = $questao.recursosHash.get(c.ensina);
+                                            if(r!=null){
+                                                int iA = Integer.valueOf(a.idadeAluno);
+                                                int iR = Integer.valueOf(r.idadeIdeal);
+                                                Questao q = new Questao();
+                                                if(q.adequa(iA,iR, caracteristicasA, r.caracteristicas)){
+                                                    System.out.print("!ADEQUA-SE!");
+                                                    //guardar na lista de recursos adequados
+                                                    adequados.add(r.id);
+                                                }else{
+                                                    System.out.print("!NAO SE ADEQUA!");
+                                                }
+
+                                            }else{
+                                                System.out.print("O RECURSO "+c.ensina+" NAO EXISTE");
+                                            }
+                                        }
+                                        System.out.print("RETURN --><--");
+                                        adequados.forEach(value -> System.out.print(value));
+                                        System.out.print("<--");
+
+                                    }else{
+                                        System.out.print("O CONCEITO "+$idConceito.text+" NAO EXISTE");
+                                    }
+                                }else{
+                                    System.out.print("O ALUNO "+$numeroAluno.text+" NAO EXISTE");
+
+                                }
+                                System.out.print("QUETAO END");
                                }
        ;
 
@@ -351,12 +406,10 @@ caracteristicas returns [ArrayList<Caracteristica> caracteristicasOut]
        }    
     : LPAREN 
            caracteristica {
-                           System.out.print("<c1 "+$caracteristica.car+"="+$caracteristica.escal+ "c1>");
                            Caracteristica c1 = new Caracteristica($caracteristica.car, $caracteristica.escal);
                            aux.add(c1);
                           } 
       (',' caracteristica {
-                           System.out.print("<c2 "+$caracteristica.car+"="+$caracteristica.escal+ " c2>");
                            Caracteristica c2 = new Caracteristica($caracteristica.car, $caracteristica.escal);
                            aux.add(c2);
                           })*
@@ -366,7 +419,7 @@ caracteristicas returns [ArrayList<Caracteristica> caracteristicasOut]
 caracteristica returns[String car, String escal]
     : '(' PALAVRA ',' escala ')' { 
                                   $caracteristica.car = $PALAVRA.text;
-                                  $caracteristica.escal = $escala.esc; //acho que dá para fazer só $escala.text
+                                  $caracteristica.escal = $escala.esc;
                                  }
     ;
 
