@@ -7,7 +7,7 @@ miguel A54673 18 [(inseguranca,2), (preocupacao,6),(tarefacurta,8)];
 ricardo A75411 24 [(inseguranca,7),(confianca,2)]
 
 RECURSOS
-rA1 TrabalhosEmGrupo Descricao1 17 [(participacao,8), (preocupacao,6)];
+rA1 Trab5lhosEmGrupo Descricao1 17 [(participacao,8), (preocupacao,6)];
 rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)];
 rA4 TrabalhosEmGrupo Descricao1 22 [(extrovertido,7)];
 
@@ -16,23 +16,15 @@ rA9 Livro Descricao2 21 [(stress,3),(motivacao,8), (confianca,7)];
 rA10 VideoYoutube Descricao5 20 [(stress,2),(visual,8), (confianca,7)];
 rA11 podCast Descricao8 23 [(concentracao,3),(auditivo,8), (confianca,7)];
 rA12 debate Descricao4 24 [(extrovertivo,7)];
-rA13 recursoEstatico aqrueossitios 22 [(visual,7)];
-rA13 recursoEstatico2 lugares 24 [(repetitivo,7)]
+rA13 recursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
+rA14 recursoEstatico2 lugares 24 [(repetitivo,7)]
 
 CONCEITOS
-cPrg1 rA1 C MIEI Tokens;
-cPrg1 rA4 C MIEI Tokens;
-
-cPrg2 rA7 C MIEI Variable;
-cPrg2 rA13 C MIEI Variable;
-cPrg2 rA13 C MIEI Variable;
-
-cPrg3 rA9 C LCC Data;
-cPrg3 rA7 C MTM Data;
-
-cPrg3 rA10 ANTLR MTM gramAtrib;
-cPrg3 rA12 ANTLR MTM gramAtribf;
-cPrg3 rA13 ANTLR MTM gramAtribf
+cPrg1 C Tokens MIEI [rA1,rA4];
+cPrg2 C Variable MIEI [rA7,rA13,rA11];
+cPrg3 C Data LCC [rA9,rA11];
+cPrg4 ANTLR Visitors LCC [rA12];
+cPrg5 ANTLR gramAtrib MEI [rA13]
 
 QUESTAO
-A54673 cPrg1
+PG39292 cPrg2
