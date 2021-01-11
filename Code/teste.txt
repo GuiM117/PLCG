@@ -4,7 +4,8 @@ joao A11111 24 [(tarefacurta,8),(stress,5),(participacao, 6)];
 xico A22222 23 [(participacao,3),(confianca,7)];
 maria PG39292 21 [(competitividade,7), (concentracao,7), (motivacao,8), (confianca,7)];
 miguel A54673 18 [(inseguranca,2), (preocupacao,6),(tarefacurta,8)];
-ricardo A75411 24 [(inseguranca,7),(confianca,2)]
+ricardo A75411 24 [(inseguranca,7),(confianca,2)];
+Toni A74357 24 [(motivacao,7),(concentracao,6),(introvertido,6)]
 
 RECURSOS
 rA1 Trab5lhosEmGrupo Descricao1 17 [(participacao,8), (preocupacao,6)];
@@ -17,14 +18,18 @@ rA10 VideoYoutube Descricao5 20 [(stress,2),(visual,8), (confianca,7)];
 rA11 podCast Descricao8 23 [(concentracao,3),(auditivo,8), (confianca,7)];
 rA12 debate Descricao4 24 [(extrovertivo,7)];
 rA13 recursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
-rA14 recursoEstatico2 lugares 24 [(repetitivo,7)]
+rA14 recursoEstatico2 lugares 24 [(motivacao,7),(concentracao,6),(introvertido,6)]
 
 CONCEITOS
 cPrg1 C Tokens MIEI [rA1,rA4];
 cPrg2 C Variable MIEI [rA7,rA13,rA11];
 cPrg3 C Data LCC [rA9,rA11];
 cPrg4 ANTLR Visitors LCC [rA12];
-cPrg5 ANTLR gramAtrib MEI [rA13]
+cPrg5 ANTLR gramAtrib MEI [rA13,rA11,rA14]
 
 QUESTAO
-PG39292 cPrg2
+listar a,
+listar r,
+listar c,
+PG39292 cPrg5,
+A11111 cPrg2
