@@ -1,31 +1,81 @@
 ALUNOS
-ana A00000 25 [(desmotivacao,4),(stress,5),(introvertivo,8)];
-joao A11111 24 [(tarefacurta,8),(stress,5),(participacao, 6)];
-xico A22222 23 [(participacao,3),(confianca,7)];
-maria PG39292 21 [(competitividade,7), (concentracao,7), (motivacao,8), (confianca,7)];
+ana A72721 25 [(motivacao,4),(stress,5),(introvertido,8)];
+joao A68976 24 [(tarefacurta,8),(stress,5),(participacao,6)];
+francisco A79182 23 [(participacao,3),(confianca,5),(motivacao,2)];
+maria PG39292 21 [(competitividade,7), (concentracao,7), (motivacao,8)];
 miguel A54673 18 [(inseguranca,2), (preocupacao,6),(tarefacurta,8)];
-ricardo A75411 24 [(inseguranca,7),(confianca,2)];
-Toni A74357 24 [(motivacao,7),(concentracao,6),(introvertido,6)]
+ricardo A75411 24 [(inseguranca,7),(confianca,2),(introvertido,6)];
+toni A74357 24 [(motivacao,7),(concentracao,6),(competitividade,5)];
+andre A79867 18 [(timidez,8),(motivacao,6),(preocupacao,4)];
+guilherme A72173 24 [(stress,5),(motivacao,4),(confianca,5)];
+sara A78234 19 [(timidez,2),(stress,3),(confianca,7)];
+joana A69089 18 [(participacao,8),(concentracao,5),(introvertido,1)];
+filipa A69876 21 [(tarefacurta,2),(motivacao,2),(introvertido,8)];
+luis A66723 22 [(confianca,8),(timidez,3),(motivacao,2)];
+filipe A80023 28 [(timidez,8),(participacao,3),(introvertido,5)];
+tomas A72232 27 [(stress,7),(motivacao,3),(inseguranca,7)];
+alexandre A72211 19 [(tarefacurta,2),(confianca,8),(introvertido,1)];
+tiago A71123 17 [(participacao,8),(motivacao,7),(concentracao,3)];
+manuel A80112 18 [(preocupacao,3),(motivacao,2),(introvertido,7)];
+jorge A77721 22 [(timidez,3),(concentracao,6),(competitividade,5)];
+rui A70031 24 [(confianca,3),(motivacao,6),(preocupacao,7)];
+helena A79927 25 [(competitividade,9),(motivacao,8),(inseguranca,6)];
+daniela A80010 22 [(introvertivo,8),(concentracao,2),(participacao,3)];
+helder A79998 21 [(timidez,7),(participacao,3),(stress,5)];
+feliciano A78989 19 [(participacao,8),(preocupacao,7),(concentracao,8)];
+rafael A69987 20 [(stress,8),(tarefacurta,8),(competitividade,1)];
+tania A66785 21 [(introvertivo,5),(motivacao,6),(confianca,2)];
+rogerio A80001 18 [(concentracao,7),(motivacao,2),(preocupacao,8)];
+paulo A79119 25 [(stress,2),(preocupacao,3),(motivacao,2)];
+raquel A76767 24 [(participacao,4),(motivacao,8),(timidez,2)];
+lima A74442 23 [(preocupacao,8),(tarefacurta,3),(inseguranca,2)]
 
 RECURSOS
-rA1 Trab5lhosEmGrupo Descricao1 17 [(participacao,8), (preocupacao,6)];
-rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7)];
-rA4 TrabalhosEmGrupo Descricao1 22 [(extrovertido,7)];
-
-rA7 FeedbacksConstantes Descricao2 17 [(participaca,5),(motivacao,8), (confianca,7),(tarefacurta,8)];
-rA9 Livro Descricao2 21 [(stress,3),(motivacao,8), (confianca,7)];
-rA10 VideoYoutube Descricao5 20 [(stress,2),(visual,8), (confianca,7)];
-rA11 podCast Descricao8 23 [(concentracao,3),(auditivo,8), (confianca,7)];
-rA12 debate Descricao4 24 [(extrovertivo,7)];
-rA13 recursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
-rA14 recursoEstatico2 lugares 24 [(motivacao,7),(concentracao,6),(introvertido,6)]
+rA1 TrabalhosEmGrupo Descricao1 17 [(participacao,7),(preocupacao,6),(motivacao,3)];
+rA2 FeedbacksConstantes Descricao2 17 [(participaca,5),(introvertivo,8),(confianca,4)];
+rA3 Tutoriais Descricao3 22 [(timidez,7),(stress,6),(concentracao,3)];
+rA4 TutoresOnline Descrição4 19 [(confianca,4),(desconcentracao,4),(inseguranca,3)];
+rA5 DiarioSemanal Descricao5 17 [(participaca,5),(motivacao,8), (confianca,7),(tarefacurta,8)];
+rA6 Livro Descricao6 21 [(stress,3),(motivacao,8),(confianca,7)];
+rA7 Video Descricao7 20 [(stress,2),(concentracao,4),(confianca,7)];
+rA8 Forum Descricao8 17 [(participacao,4),(preocupacao,1),(timidez,5),(inseguranca,2)];
+rA9 PodCast Descricao9 23 [(concentracao,3),(preocupacao,7),(confianca,6)];
+rA10 Debate Descricao10 19 [(confianca,8),(participacao,7),(competitividade,7)];
+rA11 Pesquisa Descricao11 20 [preocupacao,7),(participacao,3),(stress,6)];
+rA12 Exercicios Descricao12 18 [(inseguranca,6),(introvertivo,5),(tarefacurta,7)];
+rA13 TPC Descricao13 24 [(participacao,3),(preocupacao,5),(motivacao,5)];
+rA14 RecursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
+rA15 RecursoEstatico2 lugares 21 [(motivacao,7),(concentracao,6),(introvertido,6)]
 
 CONCEITOS
-cPrg1 C Tokens MIEI [rA1,rA4];
-cPrg2 C Variable MIEI [rA7,rA13,rA11];
-cPrg3 C Data LCC [rA9,rA11];
-cPrg4 ANTLR Visitors LCC [rA12];
-cPrg5 ANTLR gramAtrib MEI [rA13,rA11,rA14]
+cPrg1 C Tokens MIEI [rA1,rA3,rA6];
+cPrg2 C Variable MIEI [rA12,rA13,rA11];
+cPrg3 C Data LCC [rA7,rA1,rA8];
+cPrg4 C Operators LCC [rA9,rA11,rA13];
+cPrg5 ANTLR Visitors LCC [rA10,rA2,rA5];
+cPrg6 ANTLR gramAtrib MEI [rA11,rA6,rA14];
+cPrg7 ANTLR gram LCC [rA10,rA5,rA1];
+cPrg9 C++ Functions MIEI [rA1,rA4,rA8];
+cPrg10 C++ Variable MIEI [rA7,rA13,rA11];
+cPrg11 C++ Classes LCC [rA9,rA11,rA12];
+cPrg12 C++ Operators LCC [rA5,rA11,rA6];
+cPrg13 Java Methods LCC [rA12,rA13,rA3];
+cPrg13 Java Classes MEI [rA8,rA1,rA14];
+cPrg15 Java Objects LCC [rA12,rA10,rA6];
+cPrg16 Java DataEstructures MEI [rA6,rA11,rA12];
+cPrg17 JavaScript Functions LCC [rA13,rA7,rA4];
+cPrg18 JavaScript Classes MEI [rA13,rA11,rA14];
+cPrg19 JavaScript DataTypes LCC [rA12,rA6,rA1];
+cPrg20 JavaScript Operators MEI [rA13,rA11,rA8];
+cPrg21 Python TypeCasting LCC [rA12,rA1,rA9];
+cPrg22 Python Modules MEI [rA13,rA11,rA15];
+cPrg23 Python Iterators LCC [rA1,rA4,rA9];
+cPrg24 Python Operators MEI [rA6,rA10,rA5];
+cPrg25 HTML Headings LCC [rA2,rA5,rA12];
+cPrg26 HTML Attributes MEI [rA13,rA8,rA7];
+cPrg27 HTML Forms LCC [rA4,rA3,rA1];
+cPrg28 HTML Styles MEI [rA9,rA10,rA2]
+
 
 QUESTAO
 listar a,
