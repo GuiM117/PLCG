@@ -1,893 +1,1322 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:SeIRa="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aprende -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aprende">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eAprendidoPor"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eAprendidoPor -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eAprendidoPor"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEnsinadoPor -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEnsinadoPor">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ensina"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEscalaDe -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#eEscalaDe">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#temEscala"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePertencidoPor -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePertencidoPor">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePossuidaPor -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ePossuidaPor">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#possui"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ensina -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#ensina">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#pertence">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#possui -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#possui">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#temEscala -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#temEscala">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#curso -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#curso">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#descricaoRecurso -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#descricaoRecurso">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idConceito -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idConceito">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idRecurso -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idRecurso">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idadeAluno -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idadeAluno">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idadeIdeal -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#idadeIdeal">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeAluno -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeAluno">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeCarateristica -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeCarateristica">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeConceito -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeConceito">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeRecurso -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#nomeRecurso">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#numeroAluno -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#numeroAluno">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#subConceito -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#subConceito">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress"/>
-        <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</SeIRa:idadeAluno>
-        <SeIRa:nomeAluno>Ana</SeIRa:nomeAluno>
-        <SeIRa:numeroAluno>A0000</SeIRa:numeroAluno>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_Desmotivacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4"/>
-        <SeIRa:nomeCarateristica>Desmotivacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Ana_stress">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5"/>
-        <SeIRa:nomeCarateristica>Stress</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress"/>
-        <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</SeIRa:idadeAluno>
-        <SeIRa:nomeAluno>Joao</SeIRa:nomeAluno>
-        <SeIRa:numeroAluno>A1111</SeIRa:numeroAluno>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_Desmotivacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1"/>
-        <SeIRa:nomeCarateristica>Desmotivacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Joao_stress">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5"/>
-        <SeIRa:nomeCarateristica>Stress</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
-        <SeIRa:nomeCarateristica>Competividade</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
-        <SeIRa:nomeCarateristica>Concentracao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
-        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8"/>
-        <SeIRa:nomeCarateristica>Motivacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala2"/>
-        <SeIRa:nomeCarateristica>Inseguranca</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6"/>
-        <SeIRa:nomeCarateristica>Preocupacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
-        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala3"/>
-        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg1</SeIRa:idConceito>
-        <SeIRa:nomeConceito>C</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg2</SeIRa:idConceito>
-        <SeIRa:nomeConceito>c++</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg3</SeIRa:idConceito>
-        <SeIRa:nomeConceito>PHP</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg4 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg4</SeIRa:idConceito>
-        <SeIRa:nomeConceito>Python</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg5 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg5">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg5</SeIRa:idConceito>
-        <SeIRa:nomeConceito>Java</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg6 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg6">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg6</SeIRa:idConceito>
-        <SeIRa:nomeConceito>JavaScript</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg7 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg7">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg7</SeIRa:idConceito>
-        <SeIRa:nomeConceito>HTML</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg8 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg8">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg8</SeIRa:idConceito>
-        <SeIRa:nomeConceito>CSS</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg9 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg9">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#conceito"/>
-        <SeIRa:curso>MIEI</SeIRa:curso>
-        <SeIRa:idConceito>cPrg9</SeIRa:idConceito>
-        <SeIRa:nomeConceito>Haskell</SeIRa:nomeConceito>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#competividade">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Competividade</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#concentracao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Concentracao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#desmotivacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4"/>
-        <SeIRa:nomeCarateristica>Desmotivacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala10 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala10">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala9 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala9">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala"/>
-        <SeIRa:escala rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</SeIRa:escala>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#inseguranca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Inseguranca</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#maria -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#maria">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Competividade"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Concentracao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Confianca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Maria_Motivacao"/>
-        <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</SeIRa:idadeAluno>
-        <SeIRa:nomeAluno>Maria</SeIRa:nomeAluno>
-        <SeIRa:numeroAluno>PG39292</SeIRa:numeroAluno>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#miguel -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#miguel">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Inseguranca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Miguel_Preocupacao"/>
-        <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</SeIRa:idadeAluno>
-        <SeIRa:nomeAluno>Miguel</SeIRa:nomeAluno>
-        <SeIRa:numeroAluno>A56432</SeIRa:numeroAluno>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Motivacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Preocupacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <SeIRa:ensina rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#miguel"/>
-        <SeIRa:pertence rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#cPrg1"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao"/>
-        <SeIRa:descricaoRecurso>fghhddfh</SeIRa:descricaoRecurso>
-        <SeIRa:idRecurso>rA1</SeIRa:idRecurso>
-        <SeIRa:idadeIdeal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</SeIRa:idadeIdeal>
-        <SeIRa:nomeRecurso>Trabalhos em Grupo</SeIRa:nomeRecurso>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_participacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8"/>
-        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA1_preocupacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#preocupacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala6"/>
-        <SeIRa:nomeCarateristica>Preocupacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#recurso"/>
-        <SeIRa:ensina rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#maria"/>
-        <SeIRa:ensina rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#xico"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao"/>
-        <SeIRa:descricaoRecurso>gfgg</SeIRa:descricaoRecurso>
-        <SeIRa:idRecurso>rA2</SeIRa:idRecurso>
-        <SeIRa:idadeIdeal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</SeIRa:idadeIdeal>
-        <SeIRa:nomeRecurso>FeedBacks Constantes</SeIRa:nomeRecurso>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_confianca">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#confianca"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala7"/>
-        <SeIRa:nomeCarateristica>Confianca</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_motivacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#motivacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala8"/>
-        <SeIRa:nomeCarateristica>Motivacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#rA2_participacao">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#participacao"/>
-        <SeIRa:temEscala rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#escala5"/>
-        <SeIRa:nomeCarateristica>Participacao</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#stress">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#caracteristica"/>
-        <SeIRa:nomeCarateristica>Stress</SeIRa:nomeCarateristica>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#xico -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#xico">
-        <rdf:type rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#aluno"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Confianca"/>
-        <SeIRa:possui rdf:resource="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#Xico_Participacao"/>
-        <SeIRa:idadeAluno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</SeIRa:idadeAluno>
-        <SeIRa:nomeAluno>Xico</SeIRa:nomeAluno>
-        <SeIRa:numeroAluno>A2222</SeIRa:numeroAluno>
-    </owl:NamedIndividual>
-</rdf:RDF>
+     ontologyIRI="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa">
+    <Prefix name="" IRI="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="SeIRa" IRI="http://www.semanticweb.org/maria/ontologies/2020/11/SeIRa#"/>
+    <Declaration>
+        <Class IRI="#aluno"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#caracteristica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#competividade"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#conceito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#concentracao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#confianca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#escala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#inseguranca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#motivacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#participacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preocupacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#recurso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#stress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#subConceito"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#aprende"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eAprendidoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eEnsinadoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eEscalaDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ePertencidoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ePossuidaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eSubConceitoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ensina"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pertence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possui"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temEscala"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temSubConceito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#curso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descricaoRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#escala"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idConceito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idadeAluno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idadeIdeal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeAluno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeCarateristica"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeConceito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeRecurso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeSubConceito"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroAluno"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ana_stress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joao_stress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cPrg9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#competividade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#concentracao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#desmotivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#escala9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inseguranca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#miguel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#motivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#participacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#preocupacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA1_participacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2_confianca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rA2_participacao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tokens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xico"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#competividade"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#concentracao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#confianca"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#desmotivacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#inseguranca"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motivacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#participacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#preocupacao"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stress"/>
+        <Class IRI="#caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#subConceito"/>
+        <Class IRI="#conceito"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#Ana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#stress"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#Joao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#stress"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#competividade"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#concentracao"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#confianca"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#motivacao"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#inseguranca"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#preocupacao"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#confianca"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#participacao"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#conceito"/>
+        <NamedIndividual IRI="#cPrg9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#competividade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#concentracao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#escala"/>
+        <NamedIndividual IRI="#escala9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#inseguranca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#maria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#miguel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#motivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#participacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#preocupacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#recurso"/>
+        <NamedIndividual IRI="#rA1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#participacao"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#preocupacao"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#recurso"/>
+        <NamedIndividual IRI="#rA2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#confianca"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#motivacao"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#participacao"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#caracteristica"/>
+        <NamedIndividual IRI="#stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#subConceito"/>
+        <NamedIndividual IRI="#tokens"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#aluno"/>
+        <NamedIndividual IRI="#xico"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+        <NamedIndividual IRI="#escala4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+        <NamedIndividual IRI="#escala5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Joao"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#Joao"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+        <NamedIndividual IRI="#escala1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+        <NamedIndividual IRI="#escala5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+        <NamedIndividual IRI="#escala2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+        <NamedIndividual IRI="#escala6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+        <NamedIndividual IRI="#escala3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temSubConceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <NamedIndividual IRI="#tokens"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#escala1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+        <NamedIndividual IRI="#escala4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#maria"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#miguel"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#miguel"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ensina"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#miguel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pertence"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#cPrg1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA1"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+        <NamedIndividual IRI="#escala6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ensina"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#maria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ensina"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#xico"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#rA2"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+        <NamedIndividual IRI="#escala7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+        <NamedIndividual IRI="#escala8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temEscala"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+        <NamedIndividual IRI="#escala5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#xico"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possui"/>
+        <NamedIndividual IRI="#xico"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#Ana"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#Ana"/>
+        <Literal>Ana</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#Ana"/>
+        <Literal>A0000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Ana_Desmotivacao"/>
+        <Literal>Desmotivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Ana_stress"/>
+        <Literal>Stress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#Joao"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#Joao"/>
+        <Literal>Joao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#Joao"/>
+        <Literal>A1111</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Joao_Desmotivacao"/>
+        <Literal>Desmotivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Joao_stress"/>
+        <Literal>Stress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Competividade"/>
+        <Literal>Competividade</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Concentracao"/>
+        <Literal>Concentracao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Maria_Motivacao"/>
+        <Literal>Motivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Miguel_Inseguranca"/>
+        <Literal>Inseguranca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Miguel_Preocupacao"/>
+        <Literal>Preocupacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Xico_Confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#Xico_Participacao"/>
+        <Literal>Participacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <Literal>cPrg1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg1"/>
+        <Literal>C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg2"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg2"/>
+        <Literal>cPrg2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg2"/>
+        <Literal>c++</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg3"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg3"/>
+        <Literal>cPrg3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg3"/>
+        <Literal>PHP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg4"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg4"/>
+        <Literal>cPrg4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg4"/>
+        <Literal>Python</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg5"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg5"/>
+        <Literal>cPrg5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg5"/>
+        <Literal>Java</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg6"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg6"/>
+        <Literal>cPrg6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg6"/>
+        <Literal>JavaScript</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg7"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg7"/>
+        <Literal>cPrg7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg7"/>
+        <Literal>HTML</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg8"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg8"/>
+        <Literal>cPrg8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg8"/>
+        <Literal>CSS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#curso"/>
+        <NamedIndividual IRI="#cPrg9"/>
+        <Literal>MIEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idConceito"/>
+        <NamedIndividual IRI="#cPrg9"/>
+        <Literal>cPrg9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeConceito"/>
+        <NamedIndividual IRI="#cPrg9"/>
+        <Literal>Haskell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#competividade"/>
+        <Literal>Competividade</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#concentracao"/>
+        <Literal>Concentracao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#desmotivacao"/>
+        <Literal>Desmotivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala10"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala8"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#escala"/>
+        <NamedIndividual IRI="#escala9"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#inseguranca"/>
+        <Literal>Inseguranca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#maria"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#maria"/>
+        <Literal>Maria</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#maria"/>
+        <Literal>PG39292</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#miguel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#miguel"/>
+        <Literal>Miguel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#miguel"/>
+        <Literal>A56432</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#motivacao"/>
+        <Literal>Motivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#participacao"/>
+        <Literal>Participacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#preocupacao"/>
+        <Literal>Preocupacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#descricaoRecurso"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal>fghhddfh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idRecurso"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal>rA1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeIdeal"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeRecurso"/>
+        <NamedIndividual IRI="#rA1"/>
+        <Literal>Trabalhos em Grupo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA1_participacao"/>
+        <Literal>Participacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA1_preocupacao"/>
+        <Literal>Preocupacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#descricaoRecurso"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal>gfgg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idRecurso"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal>rA2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeIdeal"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeRecurso"/>
+        <NamedIndividual IRI="#rA2"/>
+        <Literal>FeedBacks Constantes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA2_confianca"/>
+        <Literal>Confianca</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA2_motivacao"/>
+        <Literal>Motivacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#rA2_participacao"/>
+        <Literal>Participacao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <NamedIndividual IRI="#stress"/>
+        <Literal>Stress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeSubConceito"/>
+        <NamedIndividual IRI="#tokens"/>
+        <Literal>Tokens</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idadeAluno"/>
+        <NamedIndividual IRI="#xico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAluno"/>
+        <NamedIndividual IRI="#xico"/>
+        <Literal>Xico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroAluno"/>
+        <NamedIndividual IRI="#xico"/>
+        <Literal>A2222</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ensina"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aprende"/>
+        <ObjectProperty IRI="#eAprendidoPor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eEnsinadoPor"/>
+        <ObjectProperty IRI="#ensina"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eEscalaDe"/>
+        <ObjectProperty IRI="#temEscala"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ePertencidoPor"/>
+        <ObjectProperty IRI="#pertence"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ePossuidaPor"/>
+        <ObjectProperty IRI="#possui"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eSubConceitoDe"/>
+        <ObjectProperty IRI="#temSubConceito"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#aprende"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ensina"/>
+        <Class IRI="#recurso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pertence"/>
+        <Class IRI="#recurso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possui"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possui"/>
+        <Class IRI="#recurso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temEscala"/>
+        <Class IRI="#caracteristica"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#temSubConceito"/>
+        <Class IRI="#conceito"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#aprende"/>
+        <Class IRI="#conceito"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ensina"/>
+        <Class IRI="#aluno"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pertence"/>
+        <Class IRI="#conceito"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possui"/>
+        <Class IRI="#caracteristica"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temEscala"/>
+        <Class IRI="#escala"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#temSubConceito"/>
+        <Class IRI="#subConceito"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#idadeAluno"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#curso"/>
+        <Class IRI="#conceito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#descricaoRecurso"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#escala"/>
+        <Class IRI="#caracteristica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idConceito"/>
+        <Class IRI="#conceito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idRecurso"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idadeAluno"/>
+        <Class IRI="#aluno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idadeIdeal"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeAluno"/>
+        <Class IRI="#aluno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeCarateristica"/>
+        <Class IRI="#caracteristica"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeConceito"/>
+        <Class IRI="#conceito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nomeRecurso"/>
+        <Class IRI="#recurso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroAluno"/>
+        <Class IRI="#aluno"/>
+    </DataPropertyDomain>
+</Ontology>
 
 
 
