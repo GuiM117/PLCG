@@ -41,7 +41,6 @@ rA7 Video Descricao7 20 [(stress,2),(concentracao,4),(confianca,7)];
 rA8 Forum Descricao8 17 [(participacao,4),(preocupacao,1),(timidez,5),(inseguranca,2)];
 rA9 PodCast Descricao9 23 [(concentracao,3),(preocupacao,7),(confianca,6)];
 rA10 Debate Descricao10 19 [(confianca,8),(participacao,7),(competitividade,7)];
-<<<<<<< HEAD
 rA11 Pesquisa Descricao11 20 [(preocupacao,7),(participacao,3),(stress,6)];
 rA12 Exercicios Descricao12 18 [(inseguranca,6),(introvertivo,5),(tarefacurta,7)];
 rA13 TPC Descricao13 24 [(participacao,3),(preocupacao,5),(motivacao,5)];
@@ -53,20 +52,18 @@ rA18 TutoresInteligentes Descricao18 22 [(confianca, 8), (motivacao, 7), (partic
 rA19 AtividadesDidaticas Descricao19 20 [(confianca, 4), (introvertido, 2), (participacao, 5)];
 rA20 CursosOnline Descricao20 19 [(timidez, 8), (stress, 2), (participacao, 9)];
 rA21 Documentacao Descricao21 18 [(confianca, 3), (preocupacao, 8), (tarefacurta, 5)];
-=======
-rA11 Pesquisa Descricao11 20 [preocupacao,7),(participacao,3),(stress,6)];
-rA12 Exercicios Descricao12 18 [(inseguranca,6),(introvertivo,5),(tarefacurta,7)];
-rA13 TPC Descricao13 24 [(participacao,3),(preocupacao,5),(motivacao,5)];
-rA14 RecursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
-rA15 RecursoEstatico2 lugares 21 [(motivacao,7),(concentracao,6),(introvertido,6)]
-rA16 ExemplosIlustrativos Descricao16 21 [[(timidez,2),(stress,9),(concentracao,3)]
-rA17 TrabalhosPontuacoes Descricao17 19 [(participacao,9),(preocupacao,2),(motivacao,8)]
-rA18 TutoresInteligentes Descricao18 22 [(confianca, 8), (motivacao, 7), (participacao, 8)]
-rA19 AtividadesDidaticas Descricao19 20 [(confianca, 4), (introvertido, 2), (participacao, 5)]
-rA20 CursosOnline Descricao20 19 [(timidez, 8), (stress, 2), (participacao, 9)]
-rA21 Documentacao Descricao21 18 [(confianca, 3), (preocupacao, 8), (tarefacurta, 5)]
->>>>>>> 0093fd032a26f8b5bf85c402cc52b5309e42650b
-rA22 RepresentacoesVisuais Descricao22 20 [(timidez,8),(motivacao,6),(preocupacao,4)]
+rA22 Pesquisa Descricao11 20 [(preocupacao,7),(participacao,3),(stress,6)];
+rA23 Exercicios Descricao12 18 [(inseguranca,6),(introvertivo,5),(tarefacurta,7)];
+rA24 TPC Descricao13 24 [(participacao,3),(preocupacao,5),(motivacao,5)];
+rA25 RecursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
+rA26 RecursoEstatico2 lugares 21 [(motivacao,7),(concentracao,6),(introvertido,6)];
+rA27 ExemplosIlustrativos Descricao16 21 [(timidez,2),(stress,9),(concentracao,3)];
+rA28 TrabalhosPontuacoes Descricao17 19 [(participacao,9),(preocupacao,2),(motivacao,8)];
+rA29 TutoresInteligentes Descricao18 22 [(confianca, 8), (motivacao, 7), (participacao, 8)];
+rA30 AtividadesDidaticas Descricao19 20 [(confianca, 4), (introvertido, 2), (participacao, 5)];
+rA31 CursosOnline Descricao20 19 [(timidez, 8), (stress, 2), (participacao, 9)];
+rA32 Documentacao Descricao21 18 [(confianca, 3), (preocupacao, 8), (tarefacurta, 5)];
+rA33 RepresentacoesVisuais Descricao22 20 [(timidez,8),(motivacao,6),(preocupacao,4)]
 
 CONCEITOS
 cPrg1 C Tokens MIEI [rA1,rA3,rA6];
@@ -80,10 +77,6 @@ cPrg9 C++ Functions MIEI [rA1,rA4,rA8];
 cPrg10 C++ Variable MIEI [rA7,rA13,rA11];
 cPrg11 C++ Classes LCC [rA9,rA11,rA12];
 cPrg12 C++ Operators LCC [rA5,rA11,rA6];
-<<<<<<< HEAD
-=======
-cPrg13 Java Methods LCC [rA12,rA13,rA3];
->>>>>>> 0093fd032a26f8b5bf85c402cc52b5309e42650b
 cPrg13 Java Classes MEI [rA8,rA1,rA14];
 cPrg15 Java Objects LCC [rA12,rA10,rA6];
 cPrg16 Java DataEstructures MEI [rA6,rA11,rA12];
