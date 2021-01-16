@@ -26,7 +26,6 @@ grammar aprendizagem;
                             if(cR.nomeCar.equals(cA.nomeCar)){
                                 difEscala = Math.abs(cR.escala-cA.escala);
                                 total+=(10-difEscala)/max;
-                                //System.out.print("DIFESCALA ENTRE ("+cA.nomeCar+","+cR.escala+")"+"("+cA.nomeCar+","+cR.escala+")"+"difEscala "+difEscala+ " total: "+total);
                             }
                         }  
                     }
@@ -141,7 +140,7 @@ grammar aprendizagem;
             }
             
         }
-         
+        //CARACTERISTICA --
         public class Caracteristica{
             String nomeCar;
             int escala;
@@ -162,49 +161,7 @@ cNe: alunos recursos conceitos questoes[$alunos.alunosHash, $recursos.recursosHa
 
 
 questoes [HashMap<String, Aluno> alunosHash, HashMap<String, Recurso> recursosHash, HashMap<String, Conceito> conceitosHash]
-@after{
-    /*
-    System.out.print("ESTRUTURAS DE DADOS");
-    
-    System.out.print("HASHMAP ALUNOS");
-    $questoes.alunosHash.forEach((k,v) -> {
-        System.out.println("[KEY/ID: " + k + 
-                           " NOME: "+v.nomeAluno+
-                           " NUMERO: "+v.numero+
-                           " IDADE: "+v.idadeAluno+
-                           "]");
-        for(int i = 0; i < v.caracteristicas.size(); i++) {   
-            Caracteristica c = v.caracteristicas.get(i);
-            System.out.print("CARACTERISTICA ALUNO("+c.nomeCar+" , "+c.escala+")");
-        }
-    });
-    
-    System.out.print("HASHMAP RECURSOS");
-    $questoes.recursosHash.forEach((k,v) -> {
-        System.out.println("[KEY/ID: " + k + 
-                           " NOME: "+v.nome+
-                           " DESCRICAO"+v.descricao+
-                           " IDADE IDEAL"+v.idadeIdeal+
-                           "]");
-        for(int i = 0; i < v.caracteristicas.size(); i++) {   
-            Caracteristica c = v.caracteristicas.get(i);
-            System.out.print("CARACTERISTICA RECURSO("+c.nomeCar+" , "+c.escala+")");
-       }
-    });    
-    
-    System.out.print("HASHMAP CONCEITOS");
-    $questoes.conceitosHash.forEach((k,v) -> {
-        System.out.print("[KEY/ID: " + k +
-                                " IDCONCEITO "+v.idConceito+
-                                " NOMECONCEITO "+v.nomeConceito+
-                                " SUBCONCEITO "+v.subConceito+
-                                " CURSO "+v.curso);
-        v.idsRecurso.forEach(value -> System.out.println(" IDSRECURSO "+value+" "));
-        System.out.print("]");
-    });    
-    */
 
-}
         : 'QUESTAO' 
             questao[$questoes.alunosHash, $questoes.recursosHash, $questoes.conceitosHash]
             
