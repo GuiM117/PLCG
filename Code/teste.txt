@@ -46,6 +46,13 @@ rA12 Exercicios Descricao12 18 [(inseguranca,6),(introvertivo,5),(tarefacurta,7)
 rA13 TPC Descricao13 24 [(participacao,3),(preocupacao,5),(motivacao,5)];
 rA14 RecursoEstatico aqrueossitios 22 [(visual,7),(motivacao,8)];
 rA15 RecursoEstatico2 lugares 21 [(motivacao,7),(concentracao,6),(introvertido,6)]
+rA16 ExemplosIlustrativos Descricao16 21 [[(timidez,2),(stress,9),(concentracao,3)]
+rA17 TrabalhosPontuacoes Descricao17 19 [(participacao,9),(preocupacao,2),(motivacao,8)]
+rA18 TutoresInteligentes Descricao18 22 [(confianca, 8), (motivacao, 7), (participacao, 8)]
+rA19 AtividadesDidaticas Descricao19 20 [(confianca, 4), (introvertido, 2), (participacao, 5)]
+rA20 CursosOnline Descricao20 19 [(timidez, 8), (stress, 2), (participacao, 9)]
+rA21 Documentacao Descricao21 18 [(confianca, 3), (preocupacao, 8), (tarefacurta, 5)]
+rA22 RepresentacoesVisuais Descricao22 20 [(timidez,8),(motivacao,6),(preocupacao,4)]
 
 CONCEITOS
 cPrg1 C Tokens MIEI [rA1,rA3,rA6];
